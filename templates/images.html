@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片查看 - 中国绘画分析系统</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+            background: #f5f5f0;
+        }
+
+        /* 顶部导航 */
+        .header {
+            background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #d2691e;
+        }
+        .header h1 {
+            font-size: 24px;
+            font-weight: normal;
+        }
+        .header .subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* 导航栏 */
+        .nav {
+            background: #fff;
+            padding: 12px 30px;
+            display: flex;
+            gap: 30px;
+            border-bottom: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .nav a {
+            color: #333;
+            text-decoration: none;
+            font-size: 15px;
+            padding: 5px 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s;
+        }
+        .nav a:hover, .nav a.active {
+            color: #8b4513;
+            border-bottom-color: #8b4513;
+        }
+
+        /* 主体容器 */
+        .container {
+            max-width: 1400px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* 分类列 */
+        .category-columns {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .category-col {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .category-col:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .category-header {
+            padding: 15px;
+            background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .category-header h3 {
+            font-size: 1.1em;
+        }
+        .category-header a {
+            color: white;
+            text-decoration: underline;
+            font-size: 0.9em;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+        .category-header a:hover {
+            opacity: 1;
+        }
+        .category-count {
+            font-size: 0.85em;
+            opacity: 0.9;
+        }
+        .category-images {
+            padding: 10px;
+        }
+        .category-images .image-card {
+            margin-bottom: 10px;
+        }
+
+        /* 图片卡片 */
+        .image-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .image-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+        .image-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            background: #eee;
+        }
+        .image-info {
+            padding: 10px;
+        }
+        .image-info h4 {
+            color: #333;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        .image-info p {
+            color: #666;
+            font-size: 0.8em;
+            line-height: 1.4;
+        }
+
+        /* 分类页面 */
+        .category-page {
+            display: none;
+        }
+        .category-page.active {
+            display: block;
+        }
+        .category-page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .category-page-header h2 {
+            color: #333;
+            font-size: 18px;
+        }
+        .back-btn {
+            background: #8b4513;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        .back-btn:hover {
+            background: #a0522d;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        /* 筛选按钮 */
+        .filter-buttons {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 10px 20px;
+            border: 2px solid #8b4513;
+            background: white;
+            color: #8b4513;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .filter-btn:hover {
+            background: #f5e6d3;
+        }
+        .filter-btn.active {
+            background: #8b4513;
+            color: white;
+        }
+
+        /* 开关样式 */
+        .toggle {
+            position: relative;
+            width: 50px;
+            height: 26px;
+            display: inline-block;
+        }
+        .toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #ccc;
+            transition: .3s;
+            border-radius: 26px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 3px;
+            bottom: 3px;
+            background: white;
+            transition: .3s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background: #8b4513;
+        }
+        input:checked + .slider:before {
+            transform: translateX(24px);
+        }
+        .label {
+            font-weight: bold;
+            font-size: 0.9em;
+            color: #333;
+        }
+        .toggle-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* 详情模态框 */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 1000;
+        }
+        .modal.active {
+            display: flex;
+        }
+        .modal-content {
+            background: white;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            display: flex;
+        }
+        .modal-image {
+            flex: 1;
+            position: relative;
+            min-width: 0;
+        }
+        .modal-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .modal-image canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+        }
+        .modal-info {
+            width: 350px;
+            padding: 20px;
+            overflow-y: auto;
+            background: #f9f9f9;
+            border-left: 1px solid #ddd;
+        }
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 370px;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+            z-index: 1001;
+            background: rgba(0,0,0,0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+        .modal-close:hover {
+            background: rgba(0,0,0,0.8);
+        }
+        .modal-controls {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+            padding: 15px;
+            background: #f5e6d3;
+            border-radius: 8px;
+        }
+        .keypoint-legend {
+            margin-top: 15px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 8px 0;
+            padding: 5px;
+            background: white;
+            border-radius: 4px;
+        }
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .legend-item .toggle {
+            margin-left: auto;
+        }
+
+        /* 页面标题 */
+        .page-title {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .page-count {
+            color: #666;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部 -->
+    <div class="header">
+        <div>
+            <h1>  图片查看</h1>
+            <p class="subtitle">查看姿态关键点和物体检测结果</p>
+        </div>
+        <div style="text-align: right;">
+            <a href="/shinu" style="color: white; text-decoration: none; font-size: 14px;">明清仕女图典藏 →</a>
+        </div>
+    </div>
+
+    <!-- 导航 -->
+    <div class="nav">
+        <a href="/">统计概览</a>
+        <a href="/images" class="active">图片查看</a>
+        <a href="/shinu">明清仕女图</a>
+    </div>
+
+    <!-- 主体 -->
+    <div class="container">
+        <!-- 四列分类展示 -->
+        <div class="category-columns" id="categoryColumns">
+            <div class="category-col" data-category="女">
+                <div class="category-header">
+                    <div>
+                        <h3>  女</h3>
+                        <span class="category-count" id="count-female"></span>
+                    </div>
+                    <a href="/images?category=女">查看全部</a>
+                </div>
+                <div class="category-images" id="images-female"></div>
+            </div>
+            <div class="category-col" data-category="男">
+                <div class="category-header">
+                    <div>
+                        <h3>  男</h3>
+                        <span class="category-count" id="count-male"></span>
+                    </div>
+                    <a href="/images?category=男">查看全部</a>
+                </div>
+                <div class="category-images" id="images-male"></div>
+            </div>
+            <div class="category-col" data-category="有男有女">
+                <div class="category-header">
+                    <div>
+                        <h3>  有男有女</h3>
+                        <span class="category-count" id="count-both"></span>
+                    </div>
+                    <a href="/images?category=有男有女">查看全部</a>
+                </div>
+                <div class="category-images" id="images-both"></div>
+            </div>
+            <div class="category-col" data-category="点景人物">
+                <div class="category-header">
+                    <div>
+                        <h3>  点景人物</h3>
+                        <span class="category-count" id="count-scene"></span>
+                    </div>
+                    <a href="/images?category=点景人物">查看全部</a>
+                </div>
+                <div class="category-images" id="images-scene"></div>
+            </div>
+        </div>
+
+        <!-- 分类详情页面 -->
+        <div class="category-page" id="categoryPage">
+            <div class="category-page-header">
+                <h2 id="categoryPageTitle"></h2>
+                <a href="/images" class="back-btn">← 返回分类</a>
+            </div>
+            <div class="filter-buttons" id="filterButtons" style="display: none;">
+                <!-- 筛选按钮动态生成 -->
+            </div>
+            <div class="image-grid" id="categoryGrid"></div>
+        </div>
+    </div>
+
+    <!-- 详情模态框 -->
+    <div class="modal" id="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <div class="modal-image">
+                <img id="modalImg" src="">
+                <canvas id="overlayCanvas"></canvas>
+            </div>
+            <div class="modal-info">
+                <h3 id="modalTitle">图片详情</h3>
+                <div id="modalDetails"></div>
+                <div class="modal-controls">
+                    <div class="toggle-group">
+                        <span class="label">关键点:</span>
+                        <label class="toggle"><input type="checkbox" id="modalShowKeypoints" checked><span class="slider"></span></label>
+                    </div>
+                    <div class="toggle-group">
+                        <span class="label">检测结果:</span>
+                        <label class="toggle"><input type="checkbox" id="modalShowDetections" checked><span class="slider"></span></label>
+                    </div>
+                </div>
+                <div class="keypoint-legend" id="keypointLegend">
+                    <h4>关键点图例:</h4>
+                    <div class="legend-item"><span class="legend-color" style="background:#FF4444"></span>头部(0-27)<label class="toggle"><input type="checkbox" class="part-toggle" data-part="head" checked><span class="slider"></span></label></div>
+                    <div class="legend-item"><span class="legend-color" style="background:#4444FF"></span>躯干(28-67)<label class="toggle"><input type="checkbox" class="part-toggle" data-part="torso" checked><span class="slider"></span></label></div>
+                    <div class="legend-item"><span class="legend-color" style="background:#44FF44"></span>左臂(68-107)<label class="toggle"><input type="checkbox" class="part-toggle" data-part="left_arm" checked><span class="slider"></span></label></div>
+                    <div class="legend-item"><span class="legend-color" style="background:#FFA500"></span>右臂(108-147)<label class="toggle"><input type="checkbox" class="part-toggle" data-part="right_arm" checked><span class="slider"></span></label></div>
+                    <div class="legend-item"><span class="legend-color" style="background:#9933FF"></span>左腿(148-227)<label class="toggle"><input type="checkbox" class="part-toggle" data-part="left_leg" checked><span class="slider"></span></label></div>
+                    <div class="legend-item"><span class="legend-color" style="background:#8B4513"></span>右腿(228-307)<label class="toggle"><input type="checkbox" class="part-toggle" data-part="right_leg" checked><span class="slider"></span></label></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const BODY_PARTS = {
+            '头部(0-27)': { start: 0, end: 27, color: '#FF4444' },
+            '躯干(28-67)': { start: 28, end: 67, color: '#4444FF' },
+            '左臂(68-107)': { start: 68, end: 107, color: '#44FF44' },
+            '右臂(108-147)': { start: 108, end: 147, color: '#FFA500' },
+            '左腿(148-227)': { start: 148, end: 227, color: '#9933FF' },
+            '右腿(228-307)': { start: 228, end: 307, color: '#8B4513' }
+        };
+
+        const CATEGORY_MAP = {
+            '女': { id: 'female', emoji: '  ' },
+            '男': { id: 'male', emoji: '  ' },
+            '有男有女': { id: 'both', emoji: ' ‍ ' },
+            '点景人物': { id: 'scene', emoji: ' ' }
+        };
+
+        let allImageData = [];
+        let currentImageData = null;
+
+        // 加载图片列表
+        fetch('/api/images')
+            .then(res => res.json())
+            .then(data => {
+                allImageData = data;
+                const params = new URLSearchParams(window.location.search);
+                const category = params.get('category');
+                if (category && CATEGORY_MAP[category]) {
+                    showCategoryPage(category);
+                } else {
+                    renderColumns();
+                }
+            });
+
+        function renderColumns() {
+            document.getElementById('categoryColumns').style.display = 'grid';
+            document.getElementById('categoryPage').style.display = 'none';
+
+            const groups = {};
+            for (const cat of Object.keys(CATEGORY_MAP)) {
+                groups[cat] = allImageData.filter(img => img.category === cat);
+            }
+
+            for (const [cat, info] of Object.entries(CATEGORY_MAP)) {
+                const container = document.getElementById('images-' + info.id);
+                const countEl = document.getElementById('count-' + info.id);
+                const items = groups[cat] || [];
+                countEl.textContent = `共${items.length}张`;
+
+                container.innerHTML = items.slice(0, 4).map((img, i) => {
+                    const globalIdx = allImageData.indexOf(img);
+                    return `
+                        <div class="image-card" onclick="showDetail(${globalIdx})">
+                            <img src="/api/thumb/${img.uuid}" alt="${img.category}" onerror="this.style.display='none'">
+                            <div class="image-info">
+                                <p>检测到: ${img.labels.slice(0, 3).join(', ')}${img.labels.length > 3 ? '...' : ''}</p>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            }
+        }
+
+        let publicCopyrightIds = [];
+        let publicCopyrightByCategory = {};
+        let copyrightDataLoaded = false;
+
+        // 加载所有分类的公开版权ID
+        Promise.all([
+            fetch('/api/public_copyright_ids').then(res => res.json()),
+            fetch('/api/public_copyright_ids?category=男').then(res => res.json()),
+            fetch('/api/public_copyright_ids?category=女').then(res => res.json()),
+            fetch('/api/public_copyright_ids?category=有男有女').then(res => res.json()),
+            fetch('/api/public_copyright_ids?category=点景人物').then(res => res.json())
+        ]).then(([allIds, maleIds, femaleIds, mixedIds, sceneIds]) => {
+            publicCopyrightIds = allIds;
+            publicCopyrightByCategory['男'] = maleIds;
+            publicCopyrightByCategory['女'] = femaleIds;
+            publicCopyrightByCategory['有男有女'] = mixedIds;
+            publicCopyrightByCategory['点景人物'] = sceneIds;
+            copyrightDataLoaded = true;
+            console.log('Public copyright data loaded:', {
+                '男': maleIds.length,
+                '女': femaleIds.length,
+                '有男有女': mixedIds.length,
+                '点景人物': sceneIds.length
+            });
+        }).catch(err => {
+            console.error('Failed to load copyright data:', err);
+        });
+
+        function showCategoryPage(category) {
+            document.getElementById('categoryColumns').style.display = 'none';
+            document.getElementById('categoryPage').style.display = 'block';
+
+            // 设置当前分类
+            currentCategory = category;
+
+            let filtered = allImageData.filter(img => img.category === category);
+            const totalCount = filtered.length;
+
+            // 获取当前分类的公开版权数量（如果数据已加载）
+            const categoryCopyrightCount = copyrightDataLoaded ? (publicCopyrightByCategory[category] || []).length : '加载中...';
+
+            // 所有分类都显示筛选按钮
+            const filterButtons = document.getElementById('filterButtons');
+            filterButtons.style.display = 'flex';
+            filterButtons.innerHTML = `
+                <button class="filter-btn" onclick="filterPublicCopyright(true)" id="btnPublicCopyright">  公开版权 (${categoryCopyrightCount}张)</button>
+                <button class="filter-btn active" onclick="resetFilters()" id="btnAll">全部 (${totalCount}张)</button>
+            `;
+
+            document.getElementById('categoryPageTitle').innerHTML = `${CATEGORY_MAP[category].emoji} ${category} <span class="page-count" id="pageCount">(${totalCount}张)</span>`;
+
+            renderCategoryGrid(filtered);
+
+            // 如果数据还没加载完成，延迟更新按钮文本
+            if (!copyrightDataLoaded) {
+                const checkAndUpdate = () => {
+                    if (copyrightDataLoaded) {
+                        const count = (publicCopyrightByCategory[category] || []).length;
+                        const btn = document.getElementById('btnPublicCopyright');
+                        if (btn) {
+                            btn.innerHTML = `  公开版权 (${count}张)`;
+                        }
+                    } else {
+                        setTimeout(checkAndUpdate, 100);
+                    }
+                };
+                setTimeout(checkAndUpdate, 100);
+            }
+        }
+
+        // 当前分类
+        let currentCategory = '';
+
+        function filterPublicCopyright(publicOnly) {
+            let filtered;
+            if (publicOnly) {
+                // 使用当前分类的公开版权ID列表
+                const categoryCopyrightIds = publicCopyrightByCategory[currentCategory] || [];
+                filtered = allImageData.filter(img => img.category === currentCategory && categoryCopyrightIds.includes(img.uuid));
+                document.getElementById('btnPublicCopyright').classList.add('active');
+                document.getElementById('btnAll').classList.remove('active');
+            } else {
+                resetFilters();
+                return;
+            }
+            document.getElementById('pageCount').textContent = `(${filtered.length}张)`;
+            renderCategoryGrid(filtered);
+        }
+
+        function resetFilters() {
+            const filtered = allImageData.filter(img => img.category === currentCategory);
+            document.getElementById('btnPublicCopyright').classList.remove('active');
+            document.getElementById('btnAll').classList.add('active');
+            document.getElementById('pageCount').textContent = `(${filtered.length}张)`;
+            renderCategoryGrid(filtered);
+        }
+
+        function renderCategoryGrid(filtered) {
+            const grid = document.getElementById('categoryGrid');
+            grid.innerHTML = filtered.map((img, i) => {
+                const globalIdx = allImageData.indexOf(img);
+                return `
+                    <div class="image-card" onclick="showDetail(${globalIdx})">
+                        <img src="/api/thumb/${img.uuid}" alt="${img.category}" onerror="this.style.display='none'">
+                        <div class="image-info">
+                            <h4>${img.category}</h4>
+                            <p>检测到: ${img.labels.join(', ')}</p>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function showDetail(idx) {
+            const img = allImageData[idx];
+            document.getElementById('modal').classList.add('active');
+            document.getElementById('modalTitle').textContent = img.category;
+            document.getElementById('modalImg').src = '/api/thumb/' + img.uuid;
+
+            fetch(`/api/image/${img.uuid}`)
+                .then(res => res.json())
+                .then(data => {
+                    currentImageData = data;
+                    renderDetails(data);
+                    drawOverlay(data);
+                });
+        }
+
+        function renderDetails(data) {
+            const details = document.getElementById('modalDetails');
+            let html = '<p><strong>UUID:</strong> ' + data.uuid + '</p>';
+            if (data.detection) {
+                html += '<p><strong>检测到的物体:</strong></p><ul>';
+                data.detection.labels.forEach(l => html += '<li>' + l + '</li>');
+                html += '</ul>';
+            }
+            if (data.pose) {
+                html += '<p><strong>关键点:</strong> ' + data.pose.total_keypoints + '个</p>';
+                html += '<p><strong>高置信度关键点:</strong> ' + data.pose.keypoints.length + '个</p>';
+            }
+            details.innerHTML = html;
+        }
+
+        const LABEL_COLORS = {
+            'person': '#FF6B6B', 'deity': '#4ECDC4', 'building': '#45B7D1',
+            'mountain': '#96CEB4', 'tree': '#88D8B0', 'buddha': '#FFEAA7',
+            'calligraphy': '#DDA0DD', 'boat': '#98D8C8', 'animal': '#F7DC6F',
+            'cloud': '#AED6F1', 'object': '#F0B27A', 'water': '#85C1E9'
+        };
+
+        function drawOverlay(data) {
+            const canvas = document.getElementById('overlayCanvas');
+            const img = document.getElementById('modalImg');
+            const ctx = canvas.getContext('2d');
+
+            function doDraw() {
+                const w = img.clientWidth;
+                const h = img.clientHeight;
+                canvas.width = w;
+                canvas.height = h;
+                ctx.clearRect(0, 0, w, h);
+
+                const showKeypoints = document.getElementById('modalShowKeypoints').checked;
+                const showDetections = document.getElementById('modalShowDetections').checked;
+
+                if (showKeypoints && data.pose && data.pose.keypoints.length > 0) {
+                    drawKeypoints(ctx, data.pose.keypoints, w, h);
+                }
+                if (showDetections && data.detection && data.detection.detections) {
+                    drawBboxes(ctx, data.detection.detections, w, h, data);
+                }
+            }
+
+            if (img.complete && img.naturalWidth > 0) {
+                doDraw();
+            } else {
+                img.onload = doDraw;
+            }
+        }
+
+        function drawKeypoints(ctx, keypoints, canvasW, canvasH) {
+            const imgSize = currentImageData?.pose?.image_size || [1000, 1000];
+            const origW = imgSize[0];
+            const origH = imgSize[1];
+            const scale = Math.min(canvasW / origW, canvasH / origH);
+            const drawW = origW * scale;
+            const drawH = origH * scale;
+            const offsetX = (canvasW - drawW) / 2;
+            const offsetY = (canvasH - drawH) / 2;
+
+            const partKeys = ['head', 'torso', 'left_arm', 'right_arm', 'left_leg', 'right_leg'];
+            const partRanges = [
+                { start: 0, end: 27 }, { start: 28, end: 67 }, { start: 68, end: 107 },
+                { start: 108, end: 147 }, { start: 148, end: 227 }, { start: 228, end: 307 }
+            ];
+
+            keypoints.forEach((kp, idx) => {
+                let partIdx = -1;
+                for (let i = 0; i < partRanges.length; i++) {
+                    if (idx >= partRanges[i].start && idx <= partRanges[i].end) { partIdx = i; break; }
+                }
+                const toggle = document.querySelector(`.part-toggle[data-part="${partKeys[partIdx]}"]`);
+                if (toggle && !toggle.checked) return;
+
+                let color = '#888';
+                if (partIdx >= 0) color = Object.values(BODY_PARTS)[partIdx].color;
+
+                ctx.beginPath();
+                ctx.arc(offsetX + kp.x * scale, offsetY + kp.y * scale, 5, 0, 2 * Math.PI);
+                ctx.fillStyle = color;
+                ctx.fill();
+                ctx.strokeStyle = 'white';
+                ctx.lineWidth = 1;
+                ctx.stroke();
+            });
+        }
+
+        function drawBboxes(ctx, detections, canvasW, canvasH, data) {
+            const imgSize = data?.pose?.image_size || [1000, 1000];
+            const origW = imgSize[0];
+            const origH = imgSize[1];
+            const scale = Math.min(canvasW / origW, canvasH / origH);
+            const offsetX = (canvasW - origW * scale) / 2;
+            const offsetY = (canvasH - origH * scale) / 2;
+
+            const best = {};
+            for (const det of detections) {
+                const key = det.label;
+                if (!best[key] || det.confidence > best[key].confidence) {
+                    best[key] = det;
+                }
+            }
+
+            for (const [label, det] of Object.entries(best)) {
+                const [x1, y1, x2, y2] = det.bbox;
+                const color = LABEL_COLORS[label] || '#888';
+
+                const sx = offsetX + x1 * scale;
+                const sy = offsetY + y1 * scale;
+                const sw = (x2 - x1) * scale;
+                const sh = (y2 - y1) * scale;
+
+                ctx.strokeStyle = color;
+                ctx.lineWidth = 3;
+                ctx.strokeRect(sx, sy, sw, sh);
+
+                ctx.fillStyle = color + '20';
+                ctx.fillRect(sx, sy, sw, sh);
+
+                const text = `${label} ${(det.confidence * 100).toFixed(0)}%`;
+                ctx.font = 'bold 14px Microsoft YaHei';
+                const textW = ctx.measureText(text).width;
+                ctx.fillStyle = color;
+                ctx.fillRect(sx, sy - 22, textW + 10, 22);
+
+                ctx.fillStyle = 'white';
+                ctx.fillText(text, sx + 5, sy - 6);
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.remove('active');
+        }
+
+        document.getElementById('modalShowKeypoints').addEventListener('change', (e) => {
+            document.querySelectorAll('.part-toggle').forEach(t => t.checked = e.target.checked);
+            if (currentImageData) drawOverlay(currentImageData);
+        });
+        document.getElementById('modalShowDetections').addEventListener('change', () => {
+            if (currentImageData) drawOverlay(currentImageData);
+        });
+        document.querySelectorAll('.part-toggle').forEach(toggle => {
+            toggle.addEventListener('change', () => {
+                const anyOn = [...document.querySelectorAll('.part-toggle')].some(t => t.checked);
+                document.getElementById('modalShowKeypoints').checked = anyOn;
+                if (currentImageData) drawOverlay(currentImageData);
+            });
+        });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+    </script>
+</body>
+</html>
