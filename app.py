@@ -116,27 +116,77 @@ def get_stats():
         for label in item.get('labels', []):
             label_freq[label] += 1
 
-    # 朝代分布（从category推断）
+    # 分类分布（女/男/有男有女/点景人物）
     category_freq = Counter()
     for item in detection_data:
         category_freq[item.get('category', '未知')] += 1
 
-    # 性别分类
-    gender_freq = Counter()
+    # 朝代分布
+    dynasty_freq = Counter()
     for item in detection_data:
-        cat = item.get('category', '')
-        if '女' in cat:
-            gender_freq['女性'] += 1
-        elif '男' in cat:
-            gender_freq['男性'] += 1
+        d = item.get('dynasty', '')
+        if d:
+            dynasty_freq[d] += 1
         else:
-            gender_freq['其他'] += 1
+            dynasty_freq['未知'] += 1
+
+    # 检测质量指标
+    total_confidence = 0
+    confidence_count = 0
+    total_detections = 0
+    images_with_detections = 0
+    for item in detection_data:
+        detections = item.get('detections', [])
+        if detections:
+            images_with_detections += 1
+            total_detections += len(detections)
+            for d in detections:
+                c = d.get('confidence', 0)
+                if c > 0:
+                    total_confidence += c
+                    confidence_count += 1
+
+    # 姿态关键点统计
+    images_with_pose = len(pose_data)
+    total_high_conf_kp = 0
+    for item in pose_data:
+        kps = item.get('keypoints', [])
+        high = sum(1 for kp in kps if len(kp) >= 3 and kp[2] > 0.3)
+        total_high_conf_kp += high
+
+    # 各分类的代表性图片（取置信度最高的前4张）
+    sample_images = {}
+    for item in detection_data:
+        cat = item.get('category', '未知')
+        if cat not in sample_images:
+            sample_images[cat] = []
+        detections = item.get('detections', [])
+        max_conf = max([d.get('confidence', 0) for d in detections], default=0)
+        if len(sample_images[cat]) < 4:
+            sample_images[cat].append({
+                'uuid': item['uuid'],
+                'max_confidence': round(max_conf, 3),
+                'labels': item.get('labels', []),
+                'dynasty': item.get('dynasty', '')
+            })
+    # 按置信度排序
+    for cat in sample_images:
+        sample_images[cat].sort(key=lambda x: x['max_confidence'], reverse=True)
+
+    # 检测结果Top15
+    top_labels = label_freq.most_common(15)
 
     return jsonify({
         'total_images': len(detection_data),
-        'label_freq': dict(label_freq.most_common(15)),
         'category_freq': dict(category_freq.most_common(10)),
-        'gender_freq': dict(gender_freq)
+        'dynasty_freq': dict(dynasty_freq.most_common(15)),
+        'label_freq': dict(top_labels),
+        'avg_confidence': round(total_confidence / confidence_count, 3) if confidence_count else 0,
+        'avg_detections_per_image': round(total_detections / images_with_detections, 1) if images_with_detections else 0,
+        'images_with_detections': images_with_detections,
+        'images_with_pose': images_with_pose,
+        'total_high_conf_kp': total_high_conf_kp,
+        'sample_images': sample_images
     })
 
 @app.route('/api/images')
