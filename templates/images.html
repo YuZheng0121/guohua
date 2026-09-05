@@ -639,6 +639,19 @@
         }
 
         function buildFilters() {
+            // 版权筛选计数
+            let copyrightCount = 0;
+            let nonCopyrightCount = 0;
+            allImageData.forEach(img => {
+                if (publicCopyrightIds.includes(img.uuid)) {
+                    copyrightCount++;
+                } else {
+                    nonCopyrightCount++;
+                }
+            });
+            document.getElementById('filterCopyrightCount').textContent = `(${copyrightCount})`;
+            document.getElementById('filterNonCopyrightCount').textContent = `(${nonCopyrightCount})`;
+
             // 朝代筛选
             const dynasties = {};
             allImageData.forEach(img => {
@@ -646,11 +659,11 @@
                     dynasties[img.dynasty] = (dynasties[img.dynasty] || 0) + 1;
                 }
             });
-            
+
             const dynastyContainer = document.getElementById('dynastyFilters');
             const dynastyKeys = Object.keys(dynasties).sort();
             document.getElementById('dynastyFilterCount').textContent = `(${dynastyKeys.length})`;
-            
+
             dynastyContainer.innerHTML = dynastyKeys.map(d => `
                 <label class="filter-option">
                     <input type="checkbox" checked onchange="applyFilters()" data-filter="dynasty" value="${d}"> ${d}
@@ -667,14 +680,14 @@
                     });
                 }
             });
-            
+
             const labelContainer = document.getElementById('labelFilters');
             const labelKeys = Object.keys(labels).sort();
             document.getElementById('labelFilterCount').textContent = `(${labelKeys.length})`;
-            
+
             labelContainer.innerHTML = labelKeys.map(l => `
                 <label class="filter-option">
-                    <input type="checkbox" checked onchange="applyFilters()" data-filter="label" value="${l}"> ${l}
+                    <input type="checkbox" checked onchange="applyFilters()" data-filter="label" value="${l}"> ${l>
                     <span class="count">(${labels[l]})</span>
                 </label>
             `).join('');
