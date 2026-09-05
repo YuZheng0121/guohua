@@ -17,7 +17,7 @@ app = Flask(__name__)
 
 # 数据路径
 DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
-IMAGES_DIR = os.path.join(os.path.dirname(__file__), 'images')
+IMAGES_DIR = '/root/yolo/data/raw/images'
 CSV_DIR = '/root/yolo/data/classified'
 
 # 加载数据
