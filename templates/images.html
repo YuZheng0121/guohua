@@ -760,6 +760,7 @@
             currentImageData = img;
             document.getElementById('modalTitle').textContent = img.category;
             document.getElementById('modalImage').src = '/api/thumb/' + img.uuid;
+            document.getElementById('detailModal').classList.add('show');
 
             fetch(`/api/image/${img.uuid}`)
                 .then(res => res.json())
