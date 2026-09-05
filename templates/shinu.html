@@ -299,23 +299,55 @@
         .modal-content {
             background: white;
             border-radius: 12px;
-            max-width: 900px;
+            max-width: 1000px;
             max-height: 90vh;
             overflow-y: auto;
             padding: 30px;
+            position: relative;
         }
         .modal-close {
-            float: right;
-            font-size: 24px;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
             cursor: pointer;
             color: #999;
+            background: rgba(255,255,255,0.9);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
         }
-        .modal-close:hover { color: #333; }
-        .modal-title { font-size: 20px; color: #333; margin-bottom: 20px; }
+        .modal-close:hover { color: #333; background: white; }
+        .modal-title { font-size: 22px; color: #333; margin-bottom: 20px; padding-right: 40px; }
         .modal-body { display: flex; gap: 30px; }
-        .modal-image { flex: 1; }
-        .modal-image img { width: 100%; border-radius: 8px; }
-        .modal-info { flex: 1; }
+        .modal-image {
+            flex: 1;
+            position: relative;
+            min-width: 0;
+        }
+        .modal-image img { width: 100%; border-radius: 8px; display: block; }
+        .modal-canvas-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .modal-canvas-wrapper canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .modal-info {
+            width: 300px;
+            flex-shrink: 0;
+        }
         .modal-field {
             padding: 12px;
             background: #f9f9f9;
@@ -330,6 +362,85 @@
             background: #e8e8e8;
             border-radius: 4px;
             font-size: 12px;
+        }
+        .modal-toggles {
+            display: flex;
+            gap: 15px;
+            padding: 10px 12px;
+            background: #fdf6ee;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        .modal-toggles label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: #555;
+            cursor: pointer;
+        }
+        .toggle-switch {
+            position: relative;
+            width: 36px;
+            height: 20px;
+        }
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: #ccc;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+        .toggle-slider:before {
+            content: "";
+            position: absolute;
+            height: 14px;
+            width: 14px;
+            left: 3px;
+            bottom: 3px;
+            background: white;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+        .toggle-switch input:checked + .toggle-slider { background: #8b4513; }
+        .toggle-switch input:checked + .toggle-slider:before { transform: translateX(16px); }
+        .keypoint-legend {
+            padding: 10px 12px;
+            background: #f9f9f9;
+            border-radius: 6px;
+        }
+        .keypoint-legend h4 {
+            font-size: 13px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4px 0;
+            font-size: 12px;
+            color: #555;
+        }
+        .legend-item .color-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
+        .legend-item .part-name {
+            flex: 1;
+        }
+        .legend-item .part-range {
+            color: #999;
+            font-size: 11px;
         }
     </style>
 </head>
@@ -508,6 +619,9 @@
             <div class="modal-body">
                 <div class="modal-image">
                     <img id="modalImage" src="" alt="">
+                    <div class="modal-canvas-wrapper">
+                        <canvas id="overlayCanvas"></canvas>
+                    </div>
                 </div>
                 <div class="modal-info" id="modalInfo">
                     <!-- 动态生成 -->
@@ -519,6 +633,16 @@
     <script>
         let paintingsData = [];
         let filteredData = [];
+        let currentPainting = null;
+
+        const BODY_PARTS = {
+            head: { color: '#FF6B6B', range: [0, 27], label: '头部' },
+            torso: { color: '#4A90D9', range: [28, 67], label: '躯干' },
+            left_arm: { color: '#7BC67E', range: [68, 107], label: '左臂' },
+            right_arm: { color: '#FFB347', range: [108, 147], label: '右臂' },
+            left_leg: { color: '#9B59B6', range: [148, 227], label: '左腿' },
+            right_leg: { color: '#8B4513', range: [228, 307], label: '右腿' }
+        };
 
         // 加载数据
         fetch('/api/shinu52')
@@ -657,23 +781,137 @@
         function showDetail(id) {
             const p = paintingsData.find(item => item.id === id);
             if (p) {
+                currentPainting = p;
                 document.getElementById('modalTitle').textContent = p.title;
                 document.getElementById('modalImage').src = p.thumbnail_url;
-                document.getElementById('modalInfo').innerHTML = `
+
+                // 构建信息面板
+                let infoHtml = `
                     <div class="modal-field"><label>作者</label><span>${p.author}</span></div>
                     <div class="modal-field"><label>时代</label><span>${p.dynasty}</span></div>
-                    <div class="modal-field"><label>收藏机构</label><span>${p.institution}</span></div>
+                    <div class="modal-field"><label>收藏机构</label><span>${p.institution || '未知'}</span></div>
                     <div class="modal-field"><label>检测人物数</label><span>${p.num_persons}</span></div>
                     <div class="modal-field"><label>检测标签</label>
                         <div class="modal-labels">${p.labels.map(l => `<span class="modal-label">${l}</span>`).join('')}</div>
                     </div>
                 `;
+
+                // 关键点信息
+                if (p.keypoints && p.keypoints.length > 0) {
+                    infoHtml += `
+                        <div class="modal-toggles">
+                            <label>
+                                <span class="toggle-switch">
+                                    <input type="checkbox" id="modalShowKeypoints" checked onchange="drawOverlay()">
+                                    <span class="toggle-slider"></span>
+                                </span>
+                                关键点
+                            </label>
+                            <label>
+                                <span class="toggle-switch">
+                                    <input type="checkbox" id="modalShowDetections" checked onchange="drawOverlay()">
+                                    <span class="toggle-slider"></span>
+                                </span>
+                                检测结果
+                            </label>
+                        </div>
+                        <div class="modal-field"><label>关键点</label><span>${p.keypoints.length}个</span></div>
+                        <div class="keypoint-legend">
+                            <h4>关键点图例:</h4>
+                            ${Object.entries(BODY_PARTS).map(([key, part]) => `
+                                <div class="legend-item">
+                                    <span class="color-dot" style="background: ${part.color}"></span>
+                                    <span class="part-name">${part.label}</span>
+                                    <span class="part-range">(${part.range[0]}-${part.range[1]})</span>
+                                    <label class="toggle-switch" style="margin-left: 8px;">
+                                        <input type="checkbox" class="part-toggle" data-part="${key}" checked onchange="drawOverlay()">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            `).join('')}
+                        </div>
+                    `;
+                }
+
+                document.getElementById('modalInfo').innerHTML = infoHtml;
                 document.getElementById('detailModal').classList.add('show');
+
+                // 绘制覆盖层
+                setTimeout(() => drawOverlay(), 100);
             }
         }
 
         function closeModal() {
             document.getElementById('detailModal').classList.remove('show');
+            currentPainting = null;
+        }
+
+        function drawOverlay() {
+            const canvas = document.getElementById('overlayCanvas');
+            const img = document.getElementById('modalImage');
+            const ctx = canvas.getContext('2d');
+
+            if (!currentPainting || !currentPainting.keypoints) return;
+
+            function doDraw() {
+                const w = img.clientWidth;
+                const h = img.clientHeight;
+                canvas.width = w;
+                canvas.height = h;
+                ctx.clearRect(0, 0, w, h);
+
+                const showKeypoints = document.getElementById('modalShowKeypoints')?.checked;
+                const showDetections = document.getElementById('modalShowDetections')?.checked;
+
+                if (showKeypoints && currentPainting.keypoints) {
+                    drawKeypoints(ctx, currentPainting.keypoints, w, h);
+                }
+            }
+
+            if (img.complete && img.naturalWidth > 0) {
+                doDraw();
+            } else {
+                img.onload = doDraw;
+            }
+        }
+
+        function drawKeypoints(ctx, keypoints, canvasW, canvasH) {
+            // 使用实际的图片尺寸
+            const imgSize = currentPainting?.image_size || [1000, 1000];
+            const origW = imgSize[0];
+            const origH = imgSize[1];
+            const scale = Math.min(canvasW / origW, canvasH / origH);
+            const drawW = origW * scale;
+            const drawH = origH * scale;
+            const offsetX = (canvasW - drawW) / 2;
+            const offsetY = (canvasH - drawH) / 2;
+
+            const partKeys = Object.keys(BODY_PARTS);
+
+            keypoints.forEach((kp, idx) => {
+                let partIdx = -1;
+                for (let i = 0; i < partKeys.length; i++) {
+                    const part = BODY_PARTS[partKeys[i]];
+                    if (idx >= part.range[0] && idx <= part.range[1]) {
+                        partIdx = i;
+                        break;
+                    }
+                }
+
+                const toggle = document.querySelector(`.part-toggle[data-part="${partKeys[partIdx]}"]`);
+                if (toggle && !toggle.checked) return;
+
+                let color = '#888';
+                if (partIdx >= 0) color = Object.values(BODY_PARTS)[partIdx].color;
+
+                ctx.beginPath();
+                ctx.arc(offsetX + kp.x * scale, offsetY + kp.y * scale, 5, 0, 2 * Math.PI);
+                ctx.fillStyle = color;
+                ctx.fill();
+                ctx.strokeStyle = 'white';
+                ctx.lineWidth = 1;
+                ctx.stroke();
+            });
         }
 
         // 搜索
