@@ -1,9 +1,6 @@
-# 数据文件（太大，不上传到GitHub）
-data/merged_results.json
+# 数据文件备份（不上传）
 data/merged_results_backup.json
 data/merged_results_synced.json
-data/pose_results_all.json
-data/public_copyright_ids.json
 
 # 图片文件（太大，不上传到GitHub）
 images/
