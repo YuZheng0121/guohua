@@ -9,6 +9,7 @@
 
 import os
 import json
+import csv
 from flask import Flask, render_template, jsonify, send_from_directory, request
 from collections import Counter
 
@@ -17,6 +18,7 @@ app = Flask(__name__)
 # 数据路径
 DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
 IMAGES_DIR = os.path.join(os.path.dirname(__file__), 'images')
+CSV_DIR = '/root/yolo/data/classified'
 
 # 加载数据
 print("加载数据...")
@@ -26,9 +28,30 @@ with open(os.path.join(DATA_DIR, 'pose_results_all.json'), 'r', encoding='utf-8'
 with open(os.path.join(DATA_DIR, 'merged_results.json'), 'r', encoding='utf-8') as f:
     detection_data = json.load(f)
 
+# 加载CSV获取朝代信息
+dynasty_map = {}
+csv_files = ['画作信息_男.csv', '画作信息_女.csv', '画作信息_有男有女.csv', '画作信息_点景人物.csv']
+for csv_file in csv_files:
+    csv_path = os.path.join(CSV_DIR, csv_file)
+    if os.path.exists(csv_path):
+        with open(csv_path, 'r', encoding='utf-8-sig') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                img_id = row.get('imageID', '')
+                dynasty = row.get('dynasty', '')
+                if img_id and dynasty:
+                    dynasty_map[img_id] = dynasty
+
+print("朝代信息: {}条".format(len(dynasty_map)))
+
 # 建立索引
 pose_dict = {item['image_id']: item for item in pose_data}
 detection_dict = {item['uuid']: item for item in detection_data}
+
+# 添加朝代信息到detection_dict
+for uuid in detection_dict:
+    if uuid in dynasty_map:
+        detection_dict[uuid]['dynasty'] = dynasty_map[uuid]
 
 print("姿态数据: {}张".format(len(pose_data)))
 print("检测数据: {}张".format(len(detection_data)))
@@ -125,7 +148,13 @@ def get_images():
             'uuid': uuid,
             'category': item.get('category', ''),
             'labels': item.get('labels', []),
-            'num_detections': item.get('num_detections', 0)
+            'num_detections': item.get('num_detections', 0),
+            'dynasty': item.get('dynasty', ''),
+            'detection': {
+                'labels': item.get('labels', []),
+                'num_detections': item.get('num_detections', 0),
+                'detections': item.get('detections', [])
+            }
         })
     return jsonify(images)  # 返回全部图片
 
