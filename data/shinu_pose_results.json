@@ -1,67 +1,5 @@
-[
-  {
-    "id": "2b684d4c-5f3e-11ed-b1c1-2d612f358c7a",
-    "title": "仕女图（六段）",
-    "author": "杜堇",
-    "dynasty": "明代",
-    "institution": "上海博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "building",
-      "deity",
-      "tree",
-      "calligraphy"
-    ],
-    "num_persons": 31,
-    "persons": [
-      {
-        "bbox": [
-          546.6,
-          157.9,
-          811.5,
-          820.0
-        ],
-        "confidence": 0.693
-      },
-      {
-        "bbox": [
-          1.4,
-          305.5,
-          374.3,
-          959.0
-        ],
-        "confidence": 0.656
-      },
-      {
-        "bbox": [
-          1580.9,
-          160.7,
-          1920.1,
-          934.7
-        ],
-        "confidence": 0.639
-      },
-      {
-        "bbox": [
-          2.8,
-          198.5,
-          265.6,
-          666.3
-        ],
-        "confidence": 0.478
-      },
-      {
-        "bbox": [
-          781.4,
-          254.1,
-          1081.6,
-          947.4
-        ],
-        "confidence": 0.4
-      }
-    ],
-    "thumbnail_url": "/api/thumb/2b684d4c-5f3e-11ed-b1c1-2d612f358c7a",
+{
+  "2b684d4c-5f3e-11ed-b1c1-2d612f358c7a": {
     "keypoints": [
       {
         "x": 291.0833333333333,
@@ -1611,71 +1549,7 @@
       998
     ]
   },
-  {
-    "id": "2b684e14-5f3e-11ed-b1c1-2d612f358c7a",
-    "title": "仕女图（六段）",
-    "author": "杜堇",
-    "dynasty": "明代",
-    "institution": "上海博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "object",
-      "building",
-      "deity",
-      "tree",
-      "buddha",
-      "animal"
-    ],
-    "num_persons": 21,
-    "persons": [
-      {
-        "bbox": [
-          1331.2,
-          84.8,
-          1508.3,
-          689.1
-        ],
-        "confidence": 0.801
-      },
-      {
-        "bbox": [
-          750.3,
-          234.8,
-          983.0,
-          742.5
-        ],
-        "confidence": 0.675
-      },
-      {
-        "bbox": [
-          1665.2,
-          249.4,
-          1941.2,
-          843.7
-        ],
-        "confidence": 0.468
-      },
-      {
-        "bbox": [
-          510.0,
-          299.2,
-          830.9,
-          902.7
-        ],
-        "confidence": 0.426
-      },
-      {
-        "bbox": [
-          0.0,
-          432.1,
-          123.8,
-          960.9
-        ],
-        "confidence": 0.378
-      }
-    ],
-    "thumbnail_url": "/api/thumb/2b684e14-5f3e-11ed-b1c1-2d612f358c7a",
+  "2b684e14-5f3e-11ed-b1c1-2d612f358c7a": {
     "keypoints": [
       {
         "x": 228.70833333333334,
@@ -3225,51 +3099,7 @@
       998
     ]
   },
-  {
-    "id": "626f166e-4070-11ed-9adc-c934f75048ef",
-    "title": "鹦鹉仕女图",
-    "author": "佚名",
-    "dynasty": "明代",
-    "institution": "圣路易斯艺术博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "object",
-      "building",
-      "deity",
-      "animal"
-    ],
-    "num_persons": 3,
-    "persons": [
-      {
-        "bbox": [
-          306.5,
-          846.6,
-          1050.0,
-          2811.9
-        ],
-        "confidence": 0.932
-      },
-      {
-        "bbox": [
-          322.3,
-          842.4,
-          1051.2,
-          2781.9
-        ],
-        "confidence": 0.619
-      },
-      {
-        "bbox": [
-          0.273,
-          0.294,
-          0.727,
-          0.962
-        ],
-        "confidence": 0.95
-      }
-    ],
-    "thumbnail_url": "/api/thumb/626f166e-4070-11ed-9adc-c934f75048ef",
+  "626f166e-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 188.54166666666666,
@@ -4819,69 +4649,7 @@
       2896
     ]
   },
-  {
-    "id": "628fce40-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女卷-画册",
-    "author": "杜堇",
-    "dynasty": "明代",
-    "institution": "上海博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "building",
-      "deity",
-      "tree",
-      "calligraphy"
-    ],
-    "num_persons": 29,
-    "persons": [
-      {
-        "bbox": [
-          547.2,
-          157.4,
-          807.2,
-          819.2
-        ],
-        "confidence": 0.723
-      },
-      {
-        "bbox": [
-          1.1,
-          308.8,
-          375.5,
-          958.5
-        ],
-        "confidence": 0.657
-      },
-      {
-        "bbox": [
-          1577.5,
-          161.3,
-          1919.4,
-          934.9
-        ],
-        "confidence": 0.625
-      },
-      {
-        "bbox": [
-          1849.3,
-          133.5,
-          1995.8,
-          838.9
-        ],
-        "confidence": 0.483
-      },
-      {
-        "bbox": [
-          2.1,
-          198.6,
-          265.8,
-          673.1
-        ],
-        "confidence": 0.475
-      }
-    ],
-    "thumbnail_url": "/api/thumb/628fce40-4070-11ed-9adc-c934f75048ef",
+  "628fce40-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 265.09375,
@@ -6431,53 +6199,7 @@
       998
     ]
   },
-  {
-    "id": "629b1f2a-4070-11ed-9adc-c934f75048ef",
-    "title": "红叶题诗仕女图",
-    "author": "唐寅",
-    "dynasty": "明代",
-    "institution": "未知",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "object",
-      "building",
-      "mountain",
-      "deity",
-      "tree",
-      "calligraphy"
-    ],
-    "num_persons": 3,
-    "persons": [
-      {
-        "bbox": [
-          257.6,
-          1183.1,
-          1237.8,
-          2660.2
-        ],
-        "confidence": 0.792
-      },
-      {
-        "bbox": [
-          256.8,
-          1180.1,
-          1246.3,
-          2663.3
-        ],
-        "confidence": 0.585
-      },
-      {
-        "bbox": [
-          0.412,
-          0.404,
-          0.744,
-          0.921
-        ],
-        "confidence": 0.95
-      }
-    ],
-    "thumbnail_url": "/api/thumb/629b1f2a-4070-11ed-9adc-c934f75048ef",
+  "629b1f2a-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 175.34375,
@@ -8027,61 +7749,7 @@
       2896
     ]
   },
-  {
-    "id": "6355e558-4070-11ed-9adc-c934f75048ef",
-    "title": "蕉阴仕女图",
-    "author": "文徵明",
-    "dynasty": "明代",
-    "institution": "台北故宫博物院",
-    "copyright": "是",
-    "labels": [
-      "person",
-      "mountain",
-      "deity",
-      "tree",
-      "buddha",
-      "calligraphy"
-    ],
-    "num_persons": 4,
-    "persons": [
-      {
-        "bbox": [
-          496.0,
-          1338.0,
-          632.2,
-          1703.2
-        ],
-        "confidence": 0.766
-      },
-      {
-        "bbox": [
-          492.1,
-          1337.0,
-          639.9,
-          1706.4
-        ],
-        "confidence": 0.678
-      },
-      {
-        "bbox": [
-          584.8,
-          944.5,
-          913.9,
-          1665.9
-        ],
-        "confidence": 0.302
-      },
-      {
-        "bbox": [
-          0.462,
-          0.658,
-          0.604,
-          0.831
-        ],
-        "confidence": 0.92
-      }
-    ],
-    "thumbnail_url": "/api/thumb/6355e558-4070-11ed-9adc-c934f75048ef",
+  "6355e558-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 131.98567708333334,
@@ -9631,50 +9299,7 @@
       2048
     ]
   },
-  {
-    "id": "63dc7f78-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女图册",
-    "author": "李廷薰",
-    "dynasty": "清代",
-    "institution": "大英博物馆",
-    "copyright": "是",
-    "labels": [
-      "person",
-      "deity",
-      "calligraphy",
-      "building"
-    ],
-    "num_persons": 3,
-    "persons": [
-      {
-        "bbox": [
-          435.7,
-          155.0,
-          1210.0,
-          1394.9
-        ],
-        "confidence": 0.801
-      },
-      {
-        "bbox": [
-          434.6,
-          147.8,
-          1210.3,
-          1391.9
-        ],
-        "confidence": 0.591
-      },
-      {
-        "bbox": [
-          0.217,
-          0.101,
-          0.597,
-          0.971
-        ],
-        "confidence": 0.95
-      }
-    ],
-    "thumbnail_url": "/api/thumb/63dc7f78-4070-11ed-9adc-c934f75048ef",
+  "63dc7f78-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 157.33333333333334,
@@ -11224,51 +10849,7 @@
       1430
     ]
   },
-  {
-    "id": "64111300-4070-11ed-9adc-c934f75048ef",
-    "title": "探梅仕女图",
-    "author": "费丹旭",
-    "dynasty": "清代",
-    "institution": "旅顺博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "building",
-      "mountain",
-      "deity",
-      "tree"
-    ],
-    "num_persons": 3,
-    "persons": [
-      {
-        "bbox": [
-          337.2,
-          1733.4,
-          1342.2,
-          2896.0
-        ],
-        "confidence": 0.452
-      },
-      {
-        "bbox": [
-          423.0,
-          1764.6,
-          1155.7,
-          2889.6
-        ],
-        "confidence": 0.61
-      },
-      {
-        "bbox": [
-          0.389,
-          0.613,
-          0.784,
-          1.0
-        ],
-        "confidence": 0.95
-      }
-    ],
-    "thumbnail_url": "/api/thumb/64111300-4070-11ed-9adc-c934f75048ef",
+  "64111300-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 188.54166666666666,
@@ -12818,60 +12399,7 @@
       2896
     ]
   },
-  {
-    "id": "646e77fc-4070-11ed-9adc-c934f75048ef",
-    "title": "执瓶仕女图",
-    "author": "佚名",
-    "dynasty": "清代",
-    "institution": "未知",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "object",
-      "building",
-      "deity",
-      "calligraphy"
-    ],
-    "num_persons": 4,
-    "persons": [
-      {
-        "bbox": [
-          299.5,
-          465.8,
-          900.1,
-          1823.0
-        ],
-        "confidence": 0.84
-      },
-      {
-        "bbox": [
-          295.5,
-          464.4,
-          902.5,
-          1811.6
-        ],
-        "confidence": 0.451
-      },
-      {
-        "bbox": [
-          482.4,
-          465.0,
-          883.0,
-          1154.9
-        ],
-        "confidence": 0.268
-      },
-      {
-        "bbox": [
-          0.235,
-          0.228,
-          0.765,
-          0.912
-        ],
-        "confidence": 0.95
-      }
-    ],
-    "thumbnail_url": "/api/thumb/646e77fc-4070-11ed-9adc-c934f75048ef",
+  "646e77fc-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 146.71875,
@@ -14421,71 +13949,7 @@
       2048
     ]
   },
-  {
-    "id": "6556ed20-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女册",
-    "author": "吴嘉猷",
-    "dynasty": "清代",
-    "institution": "上海博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "object",
-      "building",
-      "deity",
-      "tree",
-      "buddha",
-      "calligraphy"
-    ],
-    "num_persons": 7,
-    "persons": [
-      {
-        "bbox": [
-          798.6,
-          785.8,
-          1146.3,
-          1388.9
-        ],
-        "confidence": 0.895
-      },
-      {
-        "bbox": [
-          1090.1,
-          934.9,
-          1727.5,
-          1408.1
-        ],
-        "confidence": 0.656
-      },
-      {
-        "bbox": [
-          797.4,
-          782.9,
-          1147.7,
-          1389.7
-        ],
-        "confidence": 0.713
-      },
-      {
-        "bbox": [
-          1096.6,
-          934.1,
-          1723.2,
-          1436.8
-        ],
-        "confidence": 0.595
-      },
-      {
-        "bbox": [
-          1153.7,
-          858.9,
-          1244.8,
-          981.9
-        ],
-        "confidence": 0.302
-      }
-    ],
-    "thumbnail_url": "/api/thumb/6556ed20-4070-11ed-9adc-c934f75048ef",
+  "6556ed20-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 272.0,
@@ -16035,70 +15499,7 @@
       1687
     ]
   },
-  {
-    "id": "6557049a-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女册",
-    "author": "吴嘉猷",
-    "dynasty": "清代",
-    "institution": "上海博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "building",
-      "deity",
-      "tree",
-      "buddha",
-      "calligraphy"
-    ],
-    "num_persons": 7,
-    "persons": [
-      {
-        "bbox": [
-          1084.6,
-          834.9,
-          1510.1,
-          1482.3
-        ],
-        "confidence": 0.882
-      },
-      {
-        "bbox": [
-          655.0,
-          626.7,
-          899.0,
-          1239.2
-        ],
-        "confidence": 0.847
-      },
-      {
-        "bbox": [
-          643.2,
-          624.1,
-          901.3,
-          1241.9
-        ],
-        "confidence": 0.462
-      },
-      {
-        "bbox": [
-          1099.3,
-          832.8,
-          1513.9,
-          1484.7
-        ],
-        "confidence": 0.745
-      },
-      {
-        "bbox": [
-          544.5,
-          622.6,
-          901.4,
-          1242.2
-        ],
-        "confidence": 0.366
-      }
-    ],
-    "thumbnail_url": "/api/thumb/6557049a-4070-11ed-9adc-c934f75048ef",
+  "6557049a-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 202.66666666666666,
@@ -17648,73 +17049,7 @@
       1705
     ]
   },
-  {
-    "id": "65571d4a-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女册",
-    "author": "吴嘉猷",
-    "dynasty": "清代",
-    "institution": "上海博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "water",
-      "object",
-      "building",
-      "cloud",
-      "mountain",
-      "deity",
-      "tree",
-      "calligraphy"
-    ],
-    "num_persons": 7,
-    "persons": [
-      {
-        "bbox": [
-          383.3,
-          819.7,
-          580.5,
-          1565.1
-        ],
-        "confidence": 0.824
-      },
-      {
-        "bbox": [
-          1287.6,
-          732.8,
-          1593.6,
-          1275.2
-        ],
-        "confidence": 0.648
-      },
-      {
-        "bbox": [
-          349.3,
-          805.5,
-          582.5,
-          1564.1
-        ],
-        "confidence": 0.674
-      },
-      {
-        "bbox": [
-          1274.5,
-          728.9,
-          1598.5,
-          1408.4
-        ],
-        "confidence": 0.577
-      },
-      {
-        "bbox": [
-          1287.0,
-          729.5,
-          1595.9,
-          1260.8
-        ],
-        "confidence": 0.272
-      }
-    ],
-    "thumbnail_url": "/api/thumb/65571d4a-4070-11ed-9adc-c934f75048ef",
+  "65571d4a-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 354.6666666666667,
@@ -19264,52 +18599,7 @@
       1690
     ]
   },
-  {
-    "id": "658418b8-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女图",
-    "author": "王兆祥",
-    "dynasty": "清代",
-    "institution": "大英博物馆",
-    "copyright": "是",
-    "labels": [
-      "person",
-      "object",
-      "deity",
-      "buddha",
-      "calligraphy",
-      "animal"
-    ],
-    "num_persons": 3,
-    "persons": [
-      {
-        "bbox": [
-          181.3,
-          208.3,
-          1311.3,
-          2809.7
-        ],
-        "confidence": 0.885
-      },
-      {
-        "bbox": [
-          179.2,
-          202.5,
-          1309.6,
-          2819.0
-        ],
-        "confidence": 0.555
-      },
-      {
-        "bbox": [
-          0.123,
-          0.074,
-          0.891,
-          0.982
-        ],
-        "confidence": 0.95
-      }
-    ],
-    "thumbnail_url": "/api/thumb/658418b8-4070-11ed-9adc-c934f75048ef",
+  "658418b8-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 173.45833333333334,
@@ -20859,55 +20149,7 @@
       2896
     ]
   },
-  {
-    "id": "66c7d264-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女",
-    "author": "钱慧安",
-    "dynasty": "清代",
-    "institution": "大都会博物馆",
-    "copyright": "是",
-    "labels": [
-      "person",
-      "building",
-      "mountain",
-      "boat",
-      "deity",
-      "tree",
-      "buddha",
-      "calligraphy",
-      "animal"
-    ],
-    "num_persons": 3,
-    "persons": [
-      {
-        "bbox": [
-          648.7,
-          270.1,
-          862.1,
-          822.3
-        ],
-        "confidence": 0.67
-      },
-      {
-        "bbox": [
-          611.2,
-          267.2,
-          863.1,
-          825.8
-        ],
-        "confidence": 0.727
-      },
-      {
-        "bbox": [
-          0.324,
-          0.258,
-          0.426,
-          0.779
-        ],
-        "confidence": 0.95
-      }
-    ],
-    "thumbnail_url": "/api/thumb/66c7d264-4070-11ed-9adc-c934f75048ef",
+  "66c7d264-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 192.515625,
@@ -22457,50 +21699,7 @@
       1053
     ]
   },
-  {
-    "id": "66ccef74-4070-11ed-9adc-c934f75048ef",
-    "title": "持瓶仕女",
-    "author": "佚名",
-    "dynasty": "清代",
-    "institution": "大都会博物馆",
-    "copyright": "是",
-    "labels": [
-      "person",
-      "deity",
-      "object",
-      "building"
-    ],
-    "num_persons": 3,
-    "persons": [
-      {
-        "bbox": [
-          299.1,
-          466.2,
-          899.0,
-          1822.5
-        ],
-        "confidence": 0.787
-      },
-      {
-        "bbox": [
-          294.4,
-          465.0,
-          902.6,
-          1812.0
-        ],
-        "confidence": 0.46
-      },
-      {
-        "bbox": [
-          0.235,
-          0.228,
-          0.765,
-          0.895
-        ],
-        "confidence": 0.95
-      }
-    ],
-    "thumbnail_url": "/api/thumb/66ccef74-4070-11ed-9adc-c934f75048ef",
+  "66ccef74-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 146.71875,
@@ -24050,71 +23249,7 @@
       2048
     ]
   },
-  {
-    "id": "2b6765da-5f3e-11ed-b1c1-2d612f358c7a",
-    "title": "修竹仕女图",
-    "author": "仇英",
-    "dynasty": "明代",
-    "institution": "上海博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "building",
-      "cloud",
-      "mountain",
-      "deity",
-      "tree",
-      "calligraphy"
-    ],
-    "num_persons": 7,
-    "persons": [
-      {
-        "bbox": [
-          365.0,
-          437.3,
-          414.3,
-          583.6
-        ],
-        "confidence": 0.756
-      },
-      {
-        "bbox": [
-          251.5,
-          375.3,
-          345.0,
-          578.9
-        ],
-        "confidence": 0.445
-      },
-      {
-        "bbox": [
-          251.4,
-          375.1,
-          317.8,
-          575.4
-        ],
-        "confidence": 0.309
-      },
-      {
-        "bbox": [
-          363.8,
-          436.7,
-          414.5,
-          584.2
-        ],
-        "confidence": 0.598
-      },
-      {
-        "bbox": [
-          250.8,
-          374.3,
-          333.4,
-          580.0
-        ],
-        "confidence": 0.646
-      }
-    ],
-    "thumbnail_url": "/api/thumb/2b6765da-5f3e-11ed-b1c1-2d612f358c7a",
+  "2b6765da-5f3e-11ed-b1c1-2d612f358c7a": {
     "keypoints": [
       {
         "x": 70.625,
@@ -25664,71 +24799,7 @@
       692
     ]
   },
-  {
-    "id": "2b683dd4-5f3e-11ed-b1c1-2d612f358c7a",
-    "title": "簪花仕女图",
-    "author": "冷枚",
-    "dynasty": "清代",
-    "institution": "沈阳故宫博物院",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "object",
-      "building",
-      "cloud",
-      "deity",
-      "tree",
-      "calligraphy"
-    ],
-    "num_persons": 8,
-    "persons": [
-      {
-        "bbox": [
-          266.6,
-          141.2,
-          432.4,
-          847.2
-        ],
-        "confidence": 0.65
-      },
-      {
-        "bbox": [
-          148.0,
-          242.9,
-          333.1,
-          919.1
-        ],
-        "confidence": 0.624
-      },
-      {
-        "bbox": [
-          84.4,
-          243.6,
-          333.0,
-          917.5
-        ],
-        "confidence": 0.472
-      },
-      {
-        "bbox": [
-          263.8,
-          140.7,
-          431.1,
-          651.1
-        ],
-        "confidence": 0.363
-      },
-      {
-        "bbox": [
-          162.9,
-          244.5,
-          331.0,
-          559.0
-        ],
-        "confidence": 0.27
-      }
-    ],
-    "thumbnail_url": "/api/thumb/2b683dd4-5f3e-11ed-b1c1-2d612f358c7a",
+  "2b683dd4-5f3e-11ed-b1c1-2d612f358c7a": {
     "keypoints": [
       {
         "x": 84.0546875,
@@ -27278,70 +26349,7 @@
       1078
     ]
   },
-  {
-    "id": "2b684d7e-5f3e-11ed-b1c1-2d612f358c7a",
-    "title": "仕女图（六段）",
-    "author": "杜堇",
-    "dynasty": "明代",
-    "institution": "上海博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "building",
-      "mountain",
-      "deity",
-      "tree",
-      "animal"
-    ],
-    "num_persons": 10,
-    "persons": [
-      {
-        "bbox": [
-          962.3,
-          197.4,
-          1256.3,
-          685.3
-        ],
-        "confidence": 0.606
-      },
-      {
-        "bbox": [
-          26.7,
-          366.8,
-          413.7,
-          943.2
-        ],
-        "confidence": 0.491
-      },
-      {
-        "bbox": [
-          0.0,
-          197.1,
-          68.2,
-          933.2
-        ],
-        "confidence": 0.444
-      },
-      {
-        "bbox": [
-          470.3,
-          12.9,
-          571.1,
-          294.6
-        ],
-        "confidence": 0.295
-      },
-      {
-        "bbox": [
-          955.0,
-          195.8,
-          1255.5,
-          690.8
-        ],
-        "confidence": 0.689
-      }
-    ],
-    "thumbnail_url": "/api/thumb/2b684d7e-5f3e-11ed-b1c1-2d612f358c7a",
+  "2b684d7e-5f3e-11ed-b1c1-2d612f358c7a": {
     "keypoints": [
       {
         "x": 262.4947916666667,
@@ -28891,68 +27899,7 @@
       998
     ]
   },
-  {
-    "id": "2b687722-5f3e-11ed-b1c1-2d612f358c7a",
-    "title": "仕女图（十二开）",
-    "author": "吴友如",
-    "dynasty": "清代",
-    "institution": "上海博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "calligraphy",
-      "boat",
-      "tree"
-    ],
-    "num_persons": 36,
-    "persons": [
-      {
-        "bbox": [
-          790.7,
-          118.0,
-          818.2,
-          166.2
-        ],
-        "confidence": 0.438
-      },
-      {
-        "bbox": [
-          770.7,
-          361.4,
-          786.5,
-          417.8
-        ],
-        "confidence": 0.379
-      },
-      {
-        "bbox": [
-          797.7,
-          598.0,
-          818.7,
-          649.3
-        ],
-        "confidence": 0.366
-      },
-      {
-        "bbox": [
-          817.1,
-          127.6,
-          862.8,
-          168.1
-        ],
-        "confidence": 0.307
-      },
-      {
-        "bbox": [
-          625.9,
-          610.9,
-          646.4,
-          636.1
-        ],
-        "confidence": 0.294
-      }
-    ],
-    "thumbnail_url": "/api/thumb/2b687722-5f3e-11ed-b1c1-2d612f358c7a",
+  "2b687722-5f3e-11ed-b1c1-2d612f358c7a": {
     "keypoints": [
       {
         "x": 121.60677083333333,
@@ -30502,71 +29449,7 @@
       760
     ]
   },
-  {
-    "id": "628fd43a-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女卷-画册",
-    "author": "杜堇",
-    "dynasty": "明代",
-    "institution": "上海博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "object",
-      "building",
-      "deity",
-      "tree",
-      "buddha",
-      "animal"
-    ],
-    "num_persons": 19,
-    "persons": [
-      {
-        "bbox": [
-          1331.7,
-          84.8,
-          1508.1,
-          688.8
-        ],
-        "confidence": 0.794
-      },
-      {
-        "bbox": [
-          751.5,
-          235.1,
-          982.7,
-          742.6
-        ],
-        "confidence": 0.654
-      },
-      {
-        "bbox": [
-          509.8,
-          298.2,
-          830.1,
-          901.8
-        ],
-        "confidence": 0.47
-      },
-      {
-        "bbox": [
-          1662.3,
-          249.8,
-          1940.9,
-          843.0
-        ],
-        "confidence": 0.469
-      },
-      {
-        "bbox": [
-          0.0,
-          432.8,
-          123.7,
-          959.9
-        ],
-        "confidence": 0.411
-      }
-    ],
-    "thumbnail_url": "/api/thumb/628fd43a-4070-11ed-9adc-c934f75048ef",
+  "628fd43a-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 228.70833333333334,
@@ -32116,50 +30999,7 @@
       998
     ]
   },
-  {
-    "id": "63dc8554-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女图册",
-    "author": "李廷薰",
-    "dynasty": "清代",
-    "institution": "大英博物馆",
-    "copyright": "是",
-    "labels": [
-      "person",
-      "deity",
-      "calligraphy",
-      "building"
-    ],
-    "num_persons": 3,
-    "persons": [
-      {
-        "bbox": [
-          1154.7,
-          232.3,
-          1672.7,
-          1408.6
-        ],
-        "confidence": 0.914
-      },
-      {
-        "bbox": [
-          1153.8,
-          233.3,
-          1673.7,
-          1410.6
-        ],
-        "confidence": 0.677
-      },
-      {
-        "bbox": [
-          0.569,
-          0.109,
-          0.823,
-          0.971
-        ],
-        "confidence": 0.95
-      }
-    ],
-    "thumbnail_url": "/api/thumb/63dc8554-4070-11ed-9adc-c934f75048ef",
+  "63dc8554-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 320.0,
@@ -33709,69 +32549,7 @@
       1447
     ]
   },
-  {
-    "id": "64289016-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女簪花图",
-    "author": "金廷标",
-    "dynasty": "清代",
-    "institution": "故宫博物院",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "object",
-      "building",
-      "deity",
-      "tree"
-    ],
-    "num_persons": 8,
-    "persons": [
-      {
-        "bbox": [
-          582.5,
-          796.7,
-          998.1,
-          1888.6
-        ],
-        "confidence": 0.883
-      },
-      {
-        "bbox": [
-          239.8,
-          551.1,
-          486.0,
-          1257.3
-        ],
-        "confidence": 0.55
-      },
-      {
-        "bbox": [
-          338.0,
-          551.5,
-          486.7,
-          1256.9
-        ],
-        "confidence": 0.412
-      },
-      {
-        "bbox": [
-          574.3,
-          795.1,
-          995.7,
-          1894.5
-        ],
-        "confidence": 0.666
-      },
-      {
-        "bbox": [
-          236.2,
-          549.0,
-          485.9,
-          1257.6
-        ],
-        "confidence": 0.519
-      }
-    ],
-    "thumbnail_url": "/api/thumb/64289016-4070-11ed-9adc-c934f75048ef",
+  "64289016-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 179.3125,
@@ -35321,71 +34099,7 @@
       2048
     ]
   },
-  {
-    "id": "6556f31a-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女册",
-    "author": "吴嘉猷",
-    "dynasty": "清代",
-    "institution": "上海博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "object",
-      "building",
-      "mountain",
-      "deity",
-      "tree",
-      "calligraphy"
-    ],
-    "num_persons": 6,
-    "persons": [
-      {
-        "bbox": [
-          553.0,
-          652.9,
-          787.9,
-          1380.2
-        ],
-        "confidence": 0.903
-      },
-      {
-        "bbox": [
-          269.7,
-          800.7,
-          595.9,
-          1411.2
-        ],
-        "confidence": 0.901
-      },
-      {
-        "bbox": [
-          546.9,
-          652.0,
-          795.5,
-          1380.2
-        ],
-        "confidence": 0.699
-      },
-      {
-        "bbox": [
-          268.0,
-          798.9,
-          593.7,
-          1410.6
-        ],
-        "confidence": 0.66
-      },
-      {
-        "bbox": [
-          0.142,
-          0.415,
-          0.295,
-          0.835
-        ],
-        "confidence": 0.95
-      }
-    ],
-    "thumbnail_url": "/api/thumb/6556f31a-4070-11ed-9adc-c934f75048ef",
+  "6556f31a-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 168.0,
@@ -36935,70 +35649,7 @@
       1687
     ]
   },
-  {
-    "id": "65570a6c-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女册",
-    "author": "吴嘉猷",
-    "dynasty": "清代",
-    "institution": "上海博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "object",
-      "building",
-      "deity",
-      "tree",
-      "calligraphy"
-    ],
-    "num_persons": 6,
-    "persons": [
-      {
-        "bbox": [
-          899.2,
-          820.3,
-          1442.6,
-          1597.1
-        ],
-        "confidence": 0.912
-      },
-      {
-        "bbox": [
-          368.2,
-          799.3,
-          725.0,
-          1538.0
-        ],
-        "confidence": 0.838
-      },
-      {
-        "bbox": [
-          370.2,
-          798.8,
-          725.9,
-          1545.2
-        ],
-        "confidence": 0.7
-      },
-      {
-        "bbox": [
-          898.5,
-          838.3,
-          1438.9,
-          1599.0
-        ],
-        "confidence": 0.629
-      },
-      {
-        "bbox": [
-          0.192,
-          0.467,
-          0.314,
-          0.779
-        ],
-        "confidence": 0.95
-      }
-    ],
-    "thumbnail_url": "/api/thumb/65570a6c-4070-11ed-9adc-c934f75048ef",
+  "65570a6c-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 288.0,
@@ -38548,70 +37199,7 @@
       1709
     ]
   },
-  {
-    "id": "65572312-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女册",
-    "author": "吴嘉猷",
-    "dynasty": "清代",
-    "institution": "上海博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "building",
-      "deity",
-      "tree",
-      "calligraphy",
-      "animal"
-    ],
-    "num_persons": 9,
-    "persons": [
-      {
-        "bbox": [
-          117.5,
-          985.3,
-          449.6,
-          1640.8
-        ],
-        "confidence": 0.919
-      },
-      {
-        "bbox": [
-          1464.6,
-          730.1,
-          1760.6,
-          1417.8
-        ],
-        "confidence": 0.834
-      },
-      {
-        "bbox": [
-          360.8,
-          874.5,
-          729.9,
-          1580.0
-        ],
-        "confidence": 0.827
-      },
-      {
-        "bbox": [
-          1459.9,
-          728.0,
-          1795.2,
-          1417.7
-        ],
-        "confidence": 0.738
-      },
-      {
-        "bbox": [
-          116.1,
-          982.9,
-          451.5,
-          1639.4
-        ],
-        "confidence": 0.682
-      }
-    ],
-    "thumbnail_url": "/api/thumb/65572312-4070-11ed-9adc-c934f75048ef",
+  "65572312-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 392.0,
@@ -40161,63 +38749,7 @@
       1689
     ]
   },
-  {
-    "id": "6a57b89a-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女",
-    "author": "唐寅",
-    "dynasty": "明代",
-    "institution": "未知",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "building",
-      "mountain",
-      "deity",
-      "tree",
-      "buddha",
-      "calligraphy",
-      "animal"
-    ],
-    "num_persons": 4,
-    "persons": [
-      {
-        "bbox": [
-          404.3,
-          1146.6,
-          1035.6,
-          2457.0
-        ],
-        "confidence": 0.656
-      },
-      {
-        "bbox": [
-          409.2,
-          1139.6,
-          992.2,
-          2460.2
-        ],
-        "confidence": 0.508
-      },
-      {
-        "bbox": [
-          414.1,
-          1140.2,
-          916.5,
-          2457.6
-        ],
-        "confidence": 0.35
-      },
-      {
-        "bbox": [
-          0.462,
-          0.354,
-          0.636,
-          0.893
-        ],
-        "confidence": 0.95
-      }
-    ],
-    "thumbnail_url": "/api/thumb/6a57b89a-4070-11ed-9adc-c934f75048ef",
+  "6a57b89a-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 192.3125,
@@ -41767,69 +40299,7 @@
       2896
     ]
   },
-  {
-    "id": "2b6814d0-5f3e-11ed-b1c1-2d612f358c7a",
-    "title": "仕女图",
-    "author": "冷铨",
-    "dynasty": "清代",
-    "institution": "故宫博物院",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "building",
-      "deity",
-      "tree",
-      "buddha"
-    ],
-    "num_persons": 9,
-    "persons": [
-      {
-        "bbox": [
-          294.2,
-          445.7,
-          384.7,
-          731.6
-        ],
-        "confidence": 0.829
-      },
-      {
-        "bbox": [
-          169.4,
-          417.8,
-          306.0,
-          786.3
-        ],
-        "confidence": 0.78
-      },
-      {
-        "bbox": [
-          28.9,
-          385.9,
-          99.4,
-          566.9
-        ],
-        "confidence": 0.415
-      },
-      {
-        "bbox": [
-          70.0,
-          382.4,
-          113.6,
-          553.8
-        ],
-        "confidence": 0.404
-      },
-      {
-        "bbox": [
-          295.6,
-          445.2,
-          385.6,
-          730.5
-        ],
-        "confidence": 0.62
-      }
-    ],
-    "thumbnail_url": "/api/thumb/2b6814d0-5f3e-11ed-b1c1-2d612f358c7a",
+  "2b6814d0-5f3e-11ed-b1c1-2d612f358c7a": {
     "keypoints": [
       {
         "x": 59.680989583333336,
@@ -43379,68 +41849,7 @@
       873
     ]
   },
-  {
-    "id": "2b684db0-5f3e-11ed-b1c1-2d612f358c7a",
-    "title": "仕女图（六段）",
-    "author": "杜堇",
-    "dynasty": "明代",
-    "institution": "上海博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "buddha",
-      "deity",
-      "tree"
-    ],
-    "num_persons": 18,
-    "persons": [
-      {
-        "bbox": [
-          1724.4,
-          354.9,
-          1911.7,
-          887.5
-        ],
-        "confidence": 0.798
-      },
-      {
-        "bbox": [
-          835.5,
-          269.8,
-          979.9,
-          791.5
-        ],
-        "confidence": 0.753
-      },
-      {
-        "bbox": [
-          948.2,
-          213.5,
-          1184.3,
-          825.7
-        ],
-        "confidence": 0.74
-      },
-      {
-        "bbox": [
-          181.3,
-          222.0,
-          436.7,
-          901.7
-        ],
-        "confidence": 0.703
-      },
-      {
-        "bbox": [
-          1526.1,
-          190.4,
-          1789.0,
-          715.8
-        ],
-        "confidence": 0.654
-      }
-    ],
-    "thumbnail_url": "/api/thumb/2b684db0-5f3e-11ed-b1c1-2d612f358c7a",
+  "2b684db0-5f3e-11ed-b1c1-2d612f358c7a": {
     "keypoints": [
       {
         "x": 309.2760416666667,
@@ -44990,72 +43399,7 @@
       998
     ]
   },
-  {
-    "id": "2b6876dc-5f3e-11ed-b1c1-2d612f358c7a",
-    "title": "仕女图（十二开）",
-    "author": "吴友如",
-    "dynasty": "清代",
-    "institution": "上海博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "water",
-      "building",
-      "mountain",
-      "boat",
-      "deity",
-      "tree",
-      "calligraphy"
-    ],
-    "num_persons": 9,
-    "persons": [
-      {
-        "bbox": [
-          596.4,
-          447.1,
-          685.8,
-          637.4
-        ],
-        "confidence": 0.705
-      },
-      {
-        "bbox": [
-          831.3,
-          483.3,
-          900.3,
-          572.7
-        ],
-        "confidence": 0.621
-      },
-      {
-        "bbox": [
-          719.6,
-          484.5,
-          836.3,
-          656.8
-        ],
-        "confidence": 0.521
-      },
-      {
-        "bbox": [
-          668.4,
-          458.2,
-          731.3,
-          603.4
-        ],
-        "confidence": 0.483
-      },
-      {
-        "bbox": [
-          595.5,
-          445.9,
-          682.7,
-          635.2
-        ],
-        "confidence": 0.617
-      }
-    ],
-    "thumbnail_url": "/api/thumb/2b6876dc-5f3e-11ed-b1c1-2d612f358c7a",
+  "2b6876dc-5f3e-11ed-b1c1-2d612f358c7a": {
     "keypoints": [
       {
         "x": 232.19401041666666,
@@ -46605,70 +44949,7 @@
       837
     ]
   },
-  {
-    "id": "628fda0c-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女卷-画册",
-    "author": "杜堇",
-    "dynasty": "明代",
-    "institution": "上海博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "object",
-      "building",
-      "deity",
-      "tree",
-      "buddha"
-    ],
-    "num_persons": 12,
-    "persons": [
-      {
-        "bbox": [
-          2.9,
-          384.4,
-          351.4,
-          932.1
-        ],
-        "confidence": 0.848
-      },
-      {
-        "bbox": [
-          502.5,
-          186.3,
-          788.5,
-          740.3
-        ],
-        "confidence": 0.824
-      },
-      {
-        "bbox": [
-          1466.3,
-          261.8,
-          1787.5,
-          852.6
-        ],
-        "confidence": 0.787
-      },
-      {
-        "bbox": [
-          235.5,
-          243.0,
-          541.6,
-          813.5
-        ],
-        "confidence": 0.773
-      },
-      {
-        "bbox": [
-          890.7,
-          193.3,
-          1469.3,
-          705.8
-        ],
-        "confidence": 0.609
-      }
-    ],
-    "thumbnail_url": "/api/thumb/628fda0c-4070-11ed-9adc-c934f75048ef",
+  "628fda0c-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 163.734375,
@@ -48218,69 +46499,7 @@
       998
     ]
   },
-  {
-    "id": "638183e8-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女图",
-    "author": "陈洪绶",
-    "dynasty": "明代",
-    "institution": "故宫博物院",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "building",
-      "deity",
-      "tree",
-      "calligraphy"
-    ],
-    "num_persons": 7,
-    "persons": [
-      {
-        "bbox": [
-          322.3,
-          643.4,
-          897.9,
-          1843.4
-        ],
-        "confidence": 0.711
-      },
-      {
-        "bbox": [
-          40.9,
-          1142.6,
-          343.0,
-          1679.3
-        ],
-        "confidence": 0.439
-      },
-      {
-        "bbox": [
-          213.5,
-          705.5,
-          471.1,
-          1782.0
-        ],
-        "confidence": 0.356
-      },
-      {
-        "bbox": [
-          211.3,
-          708.0,
-          476.0,
-          1576.6
-        ],
-        "confidence": 0.502
-      },
-      {
-        "bbox": [
-          307.0,
-          543.3,
-          866.1,
-          1847.9
-        ],
-        "confidence": 0.442
-      }
-    ],
-    "thumbnail_url": "/api/thumb/638183e8-4070-11ed-9adc-c934f75048ef",
+  "638183e8-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 140.7109375,
@@ -49830,42 +48049,7 @@
       2048
     ]
   },
-  {
-    "id": "63dc8b1c-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女图册",
-    "author": "李廷薰",
-    "dynasty": "清代",
-    "institution": "大英博物馆",
-    "copyright": "是",
-    "labels": [
-      "person",
-      "building",
-      "deity",
-      "buddha",
-      "calligraphy"
-    ],
-    "num_persons": 2,
-    "persons": [
-      {
-        "bbox": [
-          319.6,
-          226.6,
-          1000.9,
-          1400.7
-        ],
-        "confidence": 0.828
-      },
-      {
-        "bbox": [
-          318.2,
-          224.7,
-          1005.9,
-          1399.8
-        ],
-        "confidence": 0.621
-      }
-    ],
-    "thumbnail_url": "/api/thumb/63dc8b1c-4070-11ed-9adc-c934f75048ef",
+  "63dc8b1c-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 208.0,
@@ -51415,69 +49599,7 @@
       1436
     ]
   },
-  {
-    "id": "64d696de-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女图册　柳院秋千",
-    "author": "焦秉贞",
-    "dynasty": "清代",
-    "institution": "台北故宫博物院",
-    "copyright": "是",
-    "labels": [
-      "person",
-      "building",
-      "mountain",
-      "tree",
-      "calligraphy"
-    ],
-    "num_persons": 14,
-    "persons": [
-      {
-        "bbox": [
-          176.2,
-          892.6,
-          317.5,
-          1322.9
-        ],
-        "confidence": 0.623
-      },
-      {
-        "bbox": [
-          596.6,
-          909.4,
-          785.3,
-          1429.6
-        ],
-        "confidence": 0.574
-      },
-      {
-        "bbox": [
-          860.8,
-          954.1,
-          977.8,
-          1508.3
-        ],
-        "confidence": 0.479
-      },
-      {
-        "bbox": [
-          294.4,
-          845.0,
-          373.5,
-          1077.4
-        ],
-        "confidence": 0.445
-      },
-      {
-        "bbox": [
-          510.9,
-          902.2,
-          687.4,
-          1412.5
-        ],
-        "confidence": 0.383
-      }
-    ],
-    "thumbnail_url": "/api/thumb/64d696de-4070-11ed-9adc-c934f75048ef",
+  "64d696de-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 169.88932291666666,
@@ -53027,72 +51149,7 @@
       2048
     ]
   },
-  {
-    "id": "6556f8ec-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女册",
-    "author": "吴嘉猷",
-    "dynasty": "清代",
-    "institution": "上海博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "water",
-      "object",
-      "building",
-      "mountain",
-      "boat",
-      "tree",
-      "calligraphy"
-    ],
-    "num_persons": 10,
-    "persons": [
-      {
-        "bbox": [
-          1192.6,
-          890.0,
-          1359.3,
-          1256.2
-        ],
-        "confidence": 0.838
-      },
-      {
-        "bbox": [
-          1648.3,
-          960.9,
-          1780.3,
-          1133.7
-        ],
-        "confidence": 0.571
-      },
-      {
-        "bbox": [
-          1432.4,
-          963.5,
-          1660.0,
-          1290.8
-        ],
-        "confidence": 0.499
-      },
-      {
-        "bbox": [
-          1326.5,
-          912.6,
-          1460.9,
-          1200.9
-        ],
-        "confidence": 0.456
-      },
-      {
-        "bbox": [
-          1519.2,
-          964.5,
-          1647.0,
-          1147.2
-        ],
-        "confidence": 0.268
-      }
-    ],
-    "thumbnail_url": "/api/thumb/6556f8ec-4070-11ed-9adc-c934f75048ef",
+  "6556f8ec-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 21.333333333333332,
@@ -54642,68 +52699,7 @@
       1689
     ]
   },
-  {
-    "id": "655710fc-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女册",
-    "author": "吴嘉猷",
-    "dynasty": "清代",
-    "institution": "上海博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "deity",
-      "calligraphy",
-      "tree"
-    ],
-    "num_persons": 6,
-    "persons": [
-      {
-        "bbox": [
-          448.8,
-          844.6,
-          1349.6,
-          1268.1
-        ],
-        "confidence": 0.858
-      },
-      {
-        "bbox": [
-          311.9,
-          596.7,
-          578.0,
-          1105.7
-        ],
-        "confidence": 0.734
-      },
-      {
-        "bbox": [
-          501.5,
-          749.4,
-          625.1,
-          943.8
-        ],
-        "confidence": 0.371
-      },
-      {
-        "bbox": [
-          449.3,
-          842.9,
-          1340.3,
-          1271.6
-        ],
-        "confidence": 0.533
-      },
-      {
-        "bbox": [
-          311.1,
-          594.7,
-          550.6,
-          1104.3
-        ],
-        "confidence": 0.528
-      }
-    ],
-    "thumbnail_url": "/api/thumb/655710fc-4070-11ed-9adc-c934f75048ef",
+  "655710fc-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 157.33333333333334,
@@ -56253,63 +54249,7 @@
       1694
     ]
   },
-  {
-    "id": "655728da-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女册",
-    "author": "吴嘉猷",
-    "dynasty": "清代",
-    "institution": "上海博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "object",
-      "building",
-      "mountain",
-      "deity",
-      "tree",
-      "buddha",
-      "calligraphy"
-    ],
-    "num_persons": 4,
-    "persons": [
-      {
-        "bbox": [
-          670.5,
-          555.0,
-          955.0,
-          1337.4
-        ],
-        "confidence": 0.855
-      },
-      {
-        "bbox": [
-          406.4,
-          641.3,
-          869.2,
-          1415.6
-        ],
-        "confidence": 0.844
-      },
-      {
-        "bbox": [
-          379.5,
-          638.7,
-          872.3,
-          1417.0
-        ],
-        "confidence": 0.6
-      },
-      {
-        "bbox": [
-          665.5,
-          554.9,
-          955.1,
-          1317.5
-        ],
-        "confidence": 0.593
-      }
-    ],
-    "thumbnail_url": "/api/thumb/655728da-4070-11ed-9adc-c934f75048ef",
+  "655728da-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 208.0,
@@ -57859,67 +55799,7 @@
       1662
     ]
   },
-  {
-    "id": "6577e58e-4070-11ed-9adc-c934f75048ef",
-    "title": "梅花仕女图",
-    "author": "任伯年",
-    "dynasty": "清代",
-    "institution": "辽宁省博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "calligraphy",
-      "tree"
-    ],
-    "num_persons": 5,
-    "persons": [
-      {
-        "bbox": [
-          281.4,
-          1401.9,
-          1447.0,
-          2887.4
-        ],
-        "confidence": 0.453
-      },
-      {
-        "bbox": [
-          10.5,
-          1399.4,
-          1440.0,
-          2886.2
-        ],
-        "confidence": 0.372
-      },
-      {
-        "bbox": [
-          562.3,
-          1397.7,
-          1432.2,
-          2564.7
-        ],
-        "confidence": 0.274
-      },
-      {
-        "bbox": [
-          565.7,
-          1398.3,
-          1282.8,
-          2511.9
-        ],
-        "confidence": 0.298
-      },
-      {
-        "bbox": [
-          241.1,
-          1397.6,
-          1433.8,
-          2802.3
-        ],
-        "confidence": 0.308
-      }
-    ],
-    "thumbnail_url": "/api/thumb/6577e58e-4070-11ed-9adc-c934f75048ef",
+  "6577e58e-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 196.08333333333334,
@@ -59469,62 +57349,7 @@
       2896
     ]
   },
-  {
-    "id": "65e44918-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女图",
-    "author": "佚名",
-    "dynasty": "明代",
-    "institution": "未知",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "building",
-      "mountain",
-      "deity",
-      "tree",
-      "buddha",
-      "calligraphy"
-    ],
-    "num_persons": 4,
-    "persons": [
-      {
-        "bbox": [
-          642.4,
-          303.1,
-          1071.5,
-          1019.1
-        ],
-        "confidence": 0.651
-      },
-      {
-        "bbox": [
-          1242.2,
-          435.7,
-          1656.6,
-          1110.5
-        ],
-        "confidence": 0.598
-      },
-      {
-        "bbox": [
-          641.5,
-          303.9,
-          1039.7,
-          1021.0
-        ],
-        "confidence": 0.657
-      },
-      {
-        "bbox": [
-          1218.2,
-          435.4,
-          1606.6,
-          1115.9
-        ],
-        "confidence": 0.68
-      }
-    ],
-    "thumbnail_url": "/api/thumb/65e44918-4070-11ed-9adc-c934f75048ef",
+  "65e44918-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 277.3333333333333,
@@ -61074,70 +58899,7 @@
       1277
     ]
   },
-  {
-    "id": "2b67f54a-5f3e-11ed-b1c1-2d612f358c7a",
-    "title": "仕女图（十二开）",
-    "author": "焦秉贞",
-    "dynasty": "清代",
-    "institution": "故宫博物院",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "building",
-      "deity",
-      "tree",
-      "buddha",
-      "calligraphy"
-    ],
-    "num_persons": 13,
-    "persons": [
-      {
-        "bbox": [
-          283.1,
-          417.3,
-          400.8,
-          706.0
-        ],
-        "confidence": 0.659
-      },
-      {
-        "bbox": [
-          115.0,
-          249.4,
-          192.2,
-          418.1
-        ],
-        "confidence": 0.645
-      },
-      {
-        "bbox": [
-          24.1,
-          226.6,
-          141.8,
-          415.2
-        ],
-        "confidence": 0.593
-      },
-      {
-        "bbox": [
-          207.3,
-          235.4,
-          228.3,
-          364.6
-        ],
-        "confidence": 0.516
-      },
-      {
-        "bbox": [
-          283.4,
-          416.6,
-          404.2,
-          705.4
-        ],
-        "confidence": 0.483
-      }
-    ],
-    "thumbnail_url": "/api/thumb/2b67f54a-5f3e-11ed-b1c1-2d612f358c7a",
+  "2b67f54a-5f3e-11ed-b1c1-2d612f358c7a": {
     "keypoints": [
       {
         "x": 52.447916666666664,
@@ -62687,70 +60449,7 @@
       749
     ]
   },
-  {
-    "id": "2b684de2-5f3e-11ed-b1c1-2d612f358c7a",
-    "title": "仕女图（六段）",
-    "author": "杜堇",
-    "dynasty": "明代",
-    "institution": "上海博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "object",
-      "building",
-      "deity",
-      "tree",
-      "buddha"
-    ],
-    "num_persons": 12,
-    "persons": [
-      {
-        "bbox": [
-          2.9,
-          384.5,
-          351.3,
-          932.1
-        ],
-        "confidence": 0.848
-      },
-      {
-        "bbox": [
-          502.6,
-          187.2,
-          786.8,
-          740.8
-        ],
-        "confidence": 0.826
-      },
-      {
-        "bbox": [
-          236.1,
-          242.8,
-          542.3,
-          813.4
-        ],
-        "confidence": 0.798
-      },
-      {
-        "bbox": [
-          1466.2,
-          260.9,
-          1787.0,
-          852.7
-        ],
-        "confidence": 0.765
-      },
-      {
-        "bbox": [
-          890.5,
-          193.2,
-          1470.7,
-          706.5
-        ],
-        "confidence": 0.606
-      }
-    ],
-    "thumbnail_url": "/api/thumb/2b684de2-5f3e-11ed-b1c1-2d612f358c7a",
+  "2b684de2-5f3e-11ed-b1c1-2d612f358c7a": {
     "keypoints": [
       {
         "x": 163.734375,
@@ -64300,42 +61999,7 @@
       998
     ]
   },
-  {
-    "id": "62212486-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女图",
-    "author": "俞明",
-    "dynasty": "清代",
-    "institution": "私人藏",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "building",
-      "deity",
-      "tree",
-      "calligraphy"
-    ],
-    "num_persons": 2,
-    "persons": [
-      {
-        "bbox": [
-          811.4,
-          566.1,
-          1112.5,
-          1205.2
-        ],
-        "confidence": 0.863
-      },
-      {
-        "bbox": [
-          810.6,
-          563.4,
-          1111.8,
-          1211.6
-        ],
-        "confidence": 0.742
-      }
-    ],
-    "thumbnail_url": "/api/thumb/62212486-4070-11ed-9adc-c934f75048ef",
+  "62212486-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 239.81119791666666,
@@ -65885,56 +63549,7 @@
       2048
     ]
   },
-  {
-    "id": "62663d28-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女肖像立轴",
-    "author": "佚名",
-    "dynasty": "明代",
-    "institution": "未知",
-    "copyright": "否",
-    "labels": [
-      "person"
-    ],
-    "num_persons": 4,
-    "persons": [
-      {
-        "bbox": [
-          136.7,
-          165.3,
-          1050.1,
-          1824.3
-        ],
-        "confidence": 0.767
-      },
-      {
-        "bbox": [
-          139.0,
-          161.0,
-          1054.7,
-          1821.6
-        ],
-        "confidence": 0.375
-      },
-      {
-        "bbox": [
-          215.1,
-          166.0,
-          975.3,
-          1794.9
-        ],
-        "confidence": 0.294
-      },
-      {
-        "bbox": [
-          238.0,
-          169.5,
-          961.5,
-          1787.1
-        ],
-        "confidence": 0.281
-      }
-    ],
-    "thumbnail_url": "/api/thumb/62663d28-4070-11ed-9adc-c934f75048ef",
+  "62663d28-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 153.125,
@@ -67484,69 +65099,7 @@
       2048
     ]
   },
-  {
-    "id": "628819d4-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女图",
-    "author": "蒋乾",
-    "dynasty": "明代",
-    "institution": "大英博物馆",
-    "copyright": "是",
-    "labels": [
-      "person",
-      "building",
-      "deity",
-      "tree",
-      "calligraphy"
-    ],
-    "num_persons": 7,
-    "persons": [
-      {
-        "bbox": [
-          769.5,
-          2088.8,
-          1204.4,
-          2896.0
-        ],
-        "confidence": 0.422
-      },
-      {
-        "bbox": [
-          396.3,
-          1892.3,
-          817.3,
-          2895.3
-        ],
-        "confidence": 0.348
-      },
-      {
-        "bbox": [
-          759.4,
-          2088.6,
-          1202.4,
-          2891.7
-        ],
-        "confidence": 0.445
-      },
-      {
-        "bbox": [
-          396.9,
-          1893.4,
-          808.3,
-          2890.3
-        ],
-        "confidence": 0.489
-      },
-      {
-        "bbox": [
-          397.5,
-          1894.1,
-          804.9,
-          2690.9
-        ],
-        "confidence": 0.336
-      }
-    ],
-    "thumbnail_url": "/api/thumb/628819d4-4070-11ed-9adc-c934f75048ef",
+  "628819d4-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 148.94791666666666,
@@ -69096,70 +66649,7 @@
       2896
     ]
   },
-  {
-    "id": "628fc27e-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女卷-画册",
-    "author": "杜堇",
-    "dynasty": "明代",
-    "institution": "上海博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "building",
-      "mountain",
-      "deity",
-      "tree",
-      "buddha"
-    ],
-    "num_persons": 7,
-    "persons": [
-      {
-        "bbox": [
-          964.9,
-          197.2,
-          1256.9,
-          684.8
-        ],
-        "confidence": 0.636
-      },
-      {
-        "bbox": [
-          25.0,
-          366.9,
-          413.3,
-          942.4
-        ],
-        "confidence": 0.475
-      },
-      {
-        "bbox": [
-          0.0,
-          196.3,
-          67.9,
-          933.7
-        ],
-        "confidence": 0.355
-      },
-      {
-        "bbox": [
-          33.6,
-          368.6,
-          411.7,
-          702.7
-        ],
-        "confidence": 0.252
-      },
-      {
-        "bbox": [
-          955.4,
-          195.7,
-          1255.6,
-          690.9
-        ],
-        "confidence": 0.691
-      }
-    ],
-    "thumbnail_url": "/api/thumb/628fc27e-4070-11ed-9adc-c934f75048ef",
+  "628fc27e-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 262.4947916666667,
@@ -70709,68 +68199,7 @@
       998
     ]
   },
-  {
-    "id": "628fdfd4-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女卷-画册",
-    "author": "杜堇",
-    "dynasty": "明代",
-    "institution": "上海博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "buddha",
-      "deity",
-      "tree"
-    ],
-    "num_persons": 20,
-    "persons": [
-      {
-        "bbox": [
-          1728.8,
-          355.2,
-          1911.1,
-          887.3
-        ],
-        "confidence": 0.798
-      },
-      {
-        "bbox": [
-          836.0,
-          269.5,
-          979.8,
-          792.5
-        ],
-        "confidence": 0.739
-      },
-      {
-        "bbox": [
-          948.4,
-          213.5,
-          1183.3,
-          825.8
-        ],
-        "confidence": 0.715
-      },
-      {
-        "bbox": [
-          181.5,
-          221.8,
-          439.9,
-          902.8
-        ],
-        "confidence": 0.702
-      },
-      {
-        "bbox": [
-          1526.0,
-          190.2,
-          1789.7,
-          715.9
-        ],
-        "confidence": 0.68
-      }
-    ],
-    "thumbnail_url": "/api/thumb/628fdfd4-4070-11ed-9adc-c934f75048ef",
+  "628fdfd4-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 309.2760416666667,
@@ -72320,42 +69749,7 @@
       998
     ]
   },
-  {
-    "id": "63dc796a-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女图册",
-    "author": "李廷薰",
-    "dynasty": "清代",
-    "institution": "大英博物馆",
-    "copyright": "是",
-    "labels": [
-      "person",
-      "building",
-      "deity",
-      "tree",
-      "calligraphy"
-    ],
-    "num_persons": 2,
-    "persons": [
-      {
-        "bbox": [
-          952.1,
-          224.7,
-          1621.3,
-          1402.7
-        ],
-        "confidence": 0.915
-      },
-      {
-        "bbox": [
-          952.6,
-          223.9,
-          1619.4,
-          1403.5
-        ],
-        "confidence": 0.698
-      }
-    ],
-    "thumbnail_url": "/api/thumb/63dc796a-4070-11ed-9adc-c934f75048ef",
+  "63dc796a-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 293.3333333333333,
@@ -73905,44 +71299,7 @@
       1439
     ]
   },
-  {
-    "id": "6412305a-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女图",
-    "author": "邹其左",
-    "dynasty": "清代",
-    "institution": "未知",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "building",
-      "mountain",
-      "deity",
-      "tree",
-      "buddha",
-      "calligraphy"
-    ],
-    "num_persons": 2,
-    "persons": [
-      {
-        "bbox": [
-          1175.5,
-          84.4,
-          1512.1,
-          1035.9
-        ],
-        "confidence": 0.258
-      },
-      {
-        "bbox": [
-          1114.9,
-          81.2,
-          1515.2,
-          1102.5
-        ],
-        "confidence": 0.709
-      }
-    ],
-    "thumbnail_url": "/api/thumb/6412305a-4070-11ed-9adc-c934f75048ef",
+  "6412305a-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 358.2291666666667,
@@ -75492,70 +72849,7 @@
       1448
     ]
   },
-  {
-    "id": "64421978-4070-11ed-9adc-c934f75048ef",
-    "title": "仿唐仕女出行图",
-    "author": "佚名",
-    "dynasty": "清代",
-    "institution": "未知",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "object",
-      "building",
-      "cloud",
-      "deity",
-      "tree"
-    ],
-    "num_persons": 12,
-    "persons": [
-      {
-        "bbox": [
-          696.7,
-          720.3,
-          852.6,
-          1270.5
-        ],
-        "confidence": 0.452
-      },
-      {
-        "bbox": [
-          682.4,
-          1781.7,
-          916.2,
-          2169.1
-        ],
-        "confidence": 0.443
-      },
-      {
-        "bbox": [
-          813.6,
-          729.8,
-          1058.5,
-          1212.3
-        ],
-        "confidence": 0.349
-      },
-      {
-        "bbox": [
-          421.5,
-          1655.6,
-          658.8,
-          2200.8
-        ],
-        "confidence": 0.312
-      },
-      {
-        "bbox": [
-          422.9,
-          1660.5,
-          767.6,
-          2246.2
-        ],
-        "confidence": 0.258
-      }
-    ],
-    "thumbnail_url": "/api/thumb/64421978-4070-11ed-9adc-c934f75048ef",
+  "64421978-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 190.42708333333334,
@@ -77105,59 +74399,7 @@
       2896
     ]
   },
-  {
-    "id": "645e36d0-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女图",
-    "author": "佚名",
-    "dynasty": "清代",
-    "institution": "费城艺术博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "buddha",
-      "deity",
-      "building"
-    ],
-    "num_persons": 4,
-    "persons": [
-      {
-        "bbox": [
-          741.5,
-          905.2,
-          994.3,
-          1887.4
-        ],
-        "confidence": 0.886
-      },
-      {
-        "bbox": [
-          103.5,
-          607.1,
-          573.9,
-          1874.0
-        ],
-        "confidence": 0.845
-      },
-      {
-        "bbox": [
-          737.9,
-          904.4,
-          993.7,
-          1889.4
-        ],
-        "confidence": 0.625
-      },
-      {
-        "bbox": [
-          103.8,
-          602.6,
-          567.4,
-          1875.6
-        ],
-        "confidence": 0.555
-      }
-    ],
-    "thumbnail_url": "/api/thumb/645e36d0-4070-11ed-9adc-c934f75048ef",
+  "645e36d0-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 110.8046875,
@@ -78707,70 +75949,7 @@
       2048
     ]
   },
-  {
-    "id": "6556febe-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女册",
-    "author": "吴嘉猷",
-    "dynasty": "清代",
-    "institution": "上海博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "building",
-      "deity",
-      "tree",
-      "buddha",
-      "calligraphy"
-    ],
-    "num_persons": 5,
-    "persons": [
-      {
-        "bbox": [
-          792.6,
-          410.0,
-          1043.5,
-          1176.0
-        ],
-        "confidence": 0.764
-      },
-      {
-        "bbox": [
-          590.2,
-          573.3,
-          938.9,
-          1214.4
-        ],
-        "confidence": 0.68
-      },
-      {
-        "bbox": [
-          574.9,
-          570.8,
-          970.4,
-          1256.0
-        ],
-        "confidence": 0.592
-      },
-      {
-        "bbox": [
-          787.9,
-          408.7,
-          1039.7,
-          1180.8
-        ],
-        "confidence": 0.534
-      },
-      {
-        "bbox": [
-          575.8,
-          408.7,
-          1039.2,
-          1255.4
-        ],
-        "confidence": 0.279
-      }
-    ],
-    "thumbnail_url": "/api/thumb/6556febe-4070-11ed-9adc-c934f75048ef",
+  "6556febe-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 218.66666666666666,
@@ -80320,71 +77499,7 @@
       1631
     ]
   },
-  {
-    "id": "65571764-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女册",
-    "author": "吴嘉猷",
-    "dynasty": "清代",
-    "institution": "上海博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "object",
-      "building",
-      "deity",
-      "tree",
-      "buddha",
-      "calligraphy"
-    ],
-    "num_persons": 5,
-    "persons": [
-      {
-        "bbox": [
-          456.1,
-          846.4,
-          778.1,
-          1491.5
-        ],
-        "confidence": 0.883
-      },
-      {
-        "bbox": [
-          781.8,
-          728.0,
-          1074.4,
-          1391.6
-        ],
-        "confidence": 0.882
-      },
-      {
-        "bbox": [
-          452.8,
-          843.3,
-          776.6,
-          1491.9
-        ],
-        "confidence": 0.672
-      },
-      {
-        "bbox": [
-          778.4,
-          725.4,
-          1073.8,
-          1359.9
-        ],
-        "confidence": 0.612
-      },
-      {
-        "bbox": [
-          104.5,
-          647.5,
-          499.7,
-          1577.7
-        ],
-        "confidence": 0.399
-      }
-    ],
-    "thumbnail_url": "/api/thumb/65571764-4070-11ed-9adc-c934f75048ef",
+  "65571764-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 200.0,
@@ -81934,71 +79049,7 @@
       1685
     ]
   },
-  {
-    "id": "65572e84-4070-11ed-9adc-c934f75048ef",
-    "title": "仕女册",
-    "author": "吴嘉猷",
-    "dynasty": "清代",
-    "institution": "上海博物馆",
-    "copyright": "否",
-    "labels": [
-      "person",
-      "object",
-      "building",
-      "deity",
-      "tree",
-      "buddha",
-      "calligraphy"
-    ],
-    "num_persons": 6,
-    "persons": [
-      {
-        "bbox": [
-          558.2,
-          638.9,
-          838.0,
-          949.3
-        ],
-        "confidence": 0.598
-      },
-      {
-        "bbox": [
-          770.2,
-          534.9,
-          1082.0,
-          1078.7
-        ],
-        "confidence": 0.59
-      },
-      {
-        "bbox": [
-          759.9,
-          535.3,
-          1081.7,
-          1076.4
-        ],
-        "confidence": 0.472
-      },
-      {
-        "bbox": [
-          488.1,
-          637.0,
-          844.9,
-          1096.1
-        ],
-        "confidence": 0.492
-      },
-      {
-        "bbox": [
-          488.9,
-          534.6,
-          1080.1,
-          1087.6
-        ],
-        "confidence": 0.361
-      }
-    ],
-    "thumbnail_url": "/api/thumb/65572e84-4070-11ed-9adc-c934f75048ef",
+  "65572e84-4070-11ed-9adc-c934f75048ef": {
     "keypoints": [
       {
         "x": 210.66666666666666,
@@ -83548,4 +80599,4 @@
       1675
     ]
   }
-]
+}
