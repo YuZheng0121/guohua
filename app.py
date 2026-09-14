@@ -10,15 +10,20 @@
 import os
 import json
 import csv
-from flask import Flask, render_template, jsonify, send_from_directory, request
+import requests
+from flask import Flask, render_template, jsonify, send_from_directory, request, redirect
 from collections import Counter
 
 app = Flask(__name__)
 
-# 数据路径
+# 数据路径（自动适配当前用户家目录）
+HOME = os.path.expanduser('~')
 DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
-IMAGES_DIR = '/root/yolo/data/raw/images'
-CSV_DIR = '/root/yolo/data/classified'
+IMAGES_DIR = os.path.join(HOME, 'yolo/data/raw/images')
+CSV_DIR = os.path.join(HOME, 'yolo/data/classified')
+
+# 云端图片服务
+CLOUD_IMAGE_URL = "https://aailab.cn/server/getobjects?bucket=images&path="
 
 # 加载数据
 print("加载数据...")
@@ -242,17 +247,34 @@ def get_image_detail(uuid):
 
 @app.route('/api/thumb/<uuid>')
 def get_thumbnail(uuid):
-    """返回图片缩略图 - 从本地images目录"""
-    # 先从本地images目录查找
-    local_path = os.path.join(IMAGES_DIR, uuid + '.jpg')
-    if os.path.exists(local_path):
-        return send_from_directory(IMAGES_DIR, uuid + '.jpg')
+    """返回图片缩略图 - 从云端获取"""
+    cloud_url = CLOUD_IMAGE_URL + "tcp05src/" + uuid + ".jpg"
+    try:
+        resp = requests.get(cloud_url, timeout=10)
+        if resp.status_code == 200:
+            from flask import Response
+            return Response(resp.content, content_type=resp.headers.get('Content-Type', 'image/jpeg'))
+    except:
+        pass
     return '', 404
+
+@app.route('/api/cloud_url/<uuid>')
+def get_cloud_url(uuid):
+    """返回图片的云端URL"""
+    return jsonify({'url': CLOUD_IMAGE_URL + "tcp05src/" + uuid + ".jpg"})
 
 @app.route('/images/<path:filename>')
 def serve_image(filename):
-    """提供图片文件"""
-    return send_from_directory(IMAGES_DIR, filename)
+    """提供图片文件 - 从云端获取"""
+    cloud_url = CLOUD_IMAGE_URL + filename
+    try:
+        resp = requests.get(cloud_url, timeout=10)
+        if resp.status_code == 200:
+            from flask import Response
+            return Response(resp.content, content_type=resp.headers.get('Content-Type', 'image/jpeg'))
+    except:
+        pass
+    return '', 404
 
 if __name__ == '__main__':
     print("\n启动WebUI...")

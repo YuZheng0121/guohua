@@ -687,7 +687,7 @@
 
             labelContainer.innerHTML = labelKeys.map(l => `
                 <label class="filter-option">
-                    <input type="checkbox" checked onchange="applyFilters()" data-filter="label" value="${l}"> ${l>
+                    <input type="checkbox" checked onchange="applyFilters()" data-filter="label" value="${l}"> ${l}
                     <span class="count">(${labels[l]})</span>
                 </label>
             `).join('');
