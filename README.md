@@ -157,24 +157,3 @@ sudo ufw allow 5001
 ## 许可证
 
 内部项目，仅供研究使用。
-
----
-
-## 🧪 api-tests · 接口自动化测试框架
-
-除了应用本身，本仓库还包含对该 WebUI **接口层**的自动化测试与缺陷挖掘 → **[api-tests/](api-tests/)**
-
-| 指标 | 结果 |
-|---|---|
-| 路由覆盖 | 21 个（4 个页面 + 17 个接口） |
-| 用例数量 | 29 条（20 条契约用例 + 9 条缺陷用例） |
-| 执行耗时 | 约 3 秒，CI 上双 Python 版本矩阵并行 |
-| 已复现缺陷 | 6 类，含中文 Windows 下 GBK 解码导致的 500 崩溃、分页负索引静默丢数据 |
-
-[![api-tests](https://github.com/YuZheng0121/guohua/actions/workflows/api-test.yml/badge.svg)](https://github.com/YuZheng0121/guohua/actions/workflows/api-test.yml)
-
-```bash
-cd api-tests
-pip install -r requirements.txt
-python -m pytest -q -rx
-```
